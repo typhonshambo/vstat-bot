@@ -25,4 +25,7 @@ pip install discord.py
 ```python
 pip install valoStatus
 ```
-    
+
+
+## Donation
+[![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
