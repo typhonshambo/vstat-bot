@@ -26,6 +26,8 @@ pip install discord.py
 pip install valoStatus
 ```
 
+## SUPPORT SERVER
+[![discord.gg/tygamers](https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg)](https://discord.gg/m5mSyTV7RR)
 
 ## Donation
 [![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
