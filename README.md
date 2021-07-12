@@ -1,5 +1,5 @@
-# Valorant-server-stat-bot
-A discord bot that will show current server status of valorant for a given region
+#<h1 align="center"> Valorant Server Status Bot </h>
+A discord bot that will show current server status of valorant for a given region, whether the servers are UP or DOWN
 
 
 ## REGION LIST
