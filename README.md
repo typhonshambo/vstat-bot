@@ -12,3 +12,16 @@ AP - Asia Pacific
 KR - Korea
 LATAM - Latin America
 ```
+
+## REQUIRED PACKAGES
+ - discord.py
+ - valoStatus
+
+you can run these commands in CMD to install the packages
+```python
+pip install discord.py
+```
+```python
+pip install valoStatus
+```
+    
