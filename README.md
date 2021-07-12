@@ -17,10 +17,10 @@ LATAM - Latin America
  - valoStatus
 
 you can run these commands in CMD to install the packages
-```php
+```css
 pip install discord.py
 ```
-```php
+```css
 pip install valoStatus
 ```
     
