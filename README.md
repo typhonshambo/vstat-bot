@@ -4,7 +4,6 @@ A discord bot that will show current server status of valorant for a given regio
 
 ## REGION LIST
 ```css
-REGION LIST
 NA - North America
 EU - Europe
 BR - Brazil
