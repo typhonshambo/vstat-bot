@@ -1,4 +1,4 @@
-<h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
+# <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
 
 
 A discord bot that will show current server status of valorant for a given region, whether the servers are UP or DOWN
