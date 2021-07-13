@@ -30,3 +30,6 @@ pip install valoStatus
 [<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  ```www.discord.gg/tygamers```
 ## Donation
 [![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
+
+## Bot Link
+[click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
