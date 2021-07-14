@@ -28,7 +28,7 @@ async def on_ready():
     print("Bot online!")
 
 
-extension = ["cogs.vstats","cogs.skins"]
+extension = ["cogs.vstats","cogs.skins","cogs.agents"]
 
 if __name__ == "__main__":
         for extension in extension:
