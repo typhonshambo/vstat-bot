@@ -30,6 +30,7 @@ pip install valoStatus
 [<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  ```www.discord.gg/tygamers```
 ## Contributors
 
+<p>&nbsp;</p>
 <table class="blueTable">
 <thead>
 <tr>
@@ -39,11 +40,7 @@ pip install valoStatus
 </thead>
 <tfoot>
 <tr>
-<td colspan="2">
-<div class="links"><a href="#">&laquo;</a> <a class="active" href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">&raquo;</a></div>
-</td>
-</tr>
-</tfoot>
+
 <tbody>
 <tr>
 <td>SHAMBO</td>
@@ -51,8 +48,7 @@ pip install valoStatus
 </tr>
 <tr>
 <td>MAGNUM</td>
-MAGNUM#6969
-<td>&nbsp;</td>
+<td>&nbsp;MAGNUM#6969</td>
 </tr>
 </tbody>
 </table>
