@@ -3,6 +3,7 @@ from discord.ext import commands
 import traceback
 import sys
 import json 
+import requests
 
 with open ('./config.json', 'r') as f:
     config = json.load(f)
@@ -27,7 +28,7 @@ async def on_ready():
     print("Bot online!")
 
 
-extension = ["cogs.vstats"]
+extension = ["cogs.vstats","cogs.skins"]
 
 if __name__ == "__main__":
         for extension in extension:
