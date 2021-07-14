@@ -2,7 +2,16 @@
 
 
 A discord bot that will show current server status of valorant for a given region, whether the servers are UP or DOWN
+## INSTALLATION
+make sure to put the necessary keys in `config.json` file for the bot to work properly
 
+```json
+{
+    "token":"PUT_YOUR_TOKEN_HERE",
+    "prefix": "!",
+    "AUTH_TOKEN": "PUT_YOU_RIOT_API_KEY_HERE"
+}
+```
 
 ## REGION LIST
 ```css
