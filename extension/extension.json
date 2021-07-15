@@ -2,6 +2,9 @@
     "extension":[
         "cogs.vstats",
         "cogs.skins",
-        "cogs.agents"
+        "cogs.agents",
+        "cogs.help",
+        "cogs.maps",
+        "cogs.invite"
     ]
 }

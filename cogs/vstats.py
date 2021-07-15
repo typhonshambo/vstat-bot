@@ -64,6 +64,24 @@ class Valostatus(commands.Cog):
             
             await ctx.send(embed=embed)
 
+    @commands.command(aliases =['reglist'])
+    async def regionlist(self, ctx):
+        embed = discord.Embed(
+            color = discord.Color.red()
+        )
+        embed.add_field(name ="REGION LIST",value="""
+        NA - North America
+        EU - Europe
+        BR - Brazil
+        AP - Asia Pacific
+        KR - Korea
+        LATAM - Latin America
+        """,inline=False)
+        embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
+
+        embed.set_thumbnail(url="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png")
+        await ctx.send(embed=embed)
+
 def setup(client):
     client.add_cog(Valostatus(client))
     print("Valostatus   | Imported")

@@ -395,4 +395,4 @@ class skin(commands.Cog):
         await ctx.send(embed=embed)
 def setup(client):
     client.add_cog(skin(client))
-    print("agents      | Imported")   
+    print("agents       | Imported")   
