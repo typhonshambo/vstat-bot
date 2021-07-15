@@ -5,7 +5,7 @@ import sys
 import json 
 import requests
 
-with open ('./config.json', 'r') as f:
+with open ('config\config.json', 'r') as f:
     config = json.load(f)
     token = config['token']
     prefix = config['prefix']
@@ -28,7 +28,10 @@ async def on_ready():
     print("Bot online!")
 
 
-extension = ["cogs.vstats","cogs.skins","cogs.agents"]
+
+with open ('extension\extension.json', 'r') as data:
+    cog_data = json.load(data)
+    extension = cog_data['extension']
 
 if __name__ == "__main__":
         for extension in extension:

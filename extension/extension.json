@@ -1,0 +1,7 @@
+{
+    "extension":[
+        "cogs.vstats",
+        "cogs.skins",
+        "cogs.agents"
+    ]
+}

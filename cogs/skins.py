@@ -4,7 +4,7 @@ from .valinfo import getValorantInfo
 from discord.ext.commands import MissingRequiredArgument
 import json
 
-with open ('./config.json', 'r') as f:
+with open ('config\config.json', 'r') as f:
     config = json.load(f)
     prefix = config['prefix']
 
