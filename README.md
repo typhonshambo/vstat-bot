@@ -16,7 +16,7 @@ make sure to put the necessary keys in `config.json` file for the bot to work pr
 
 |  Command  | description |
 | -----------------  | ---------------------------------  |
-| vstat <region>     | Shows valorant server of <region>  |
+| vstat <region_name>| Shows valorant server of <region_name>  |
 | agent <agent_name> | Shows description of <agent_name>  |
 
 
