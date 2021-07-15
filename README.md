@@ -44,7 +44,7 @@ pip install valoStatus
 ```
 
 ## SUPPORT SERVER
-[<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  ```www.discord.gg/tygamers```
+[<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  [click here](https://discord.gg/m5mSyTV7RR)
 ## Contributors
 
 <p>&nbsp;</p>
