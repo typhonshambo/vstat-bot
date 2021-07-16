@@ -65,7 +65,7 @@ class help(commands.Cog):
         await ctx.send(embed=agent_help)
 
 
-    @help.command(aliases=['Map'])
+    @help.command(aliases=['Map','maps'])
     async def map(self, ctx):
         map_help = discord.Embed(
             color=0x0AFF4D,
@@ -74,6 +74,7 @@ class help(commands.Cog):
         )
         map_help.add_field(name ="ALIASES", value=f"""
         :white_small_square: `{prefix}Map <name>`
+        :white_small_square: `{prefix}maps <name>`
         """, inline=False)
         map_help.add_field(name ="USAGE", value =f"""
         It will show details regarding a given Valorant Map.

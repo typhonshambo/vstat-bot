@@ -11,7 +11,7 @@ class map(commands.Cog):
         self.client = client
 
 
-    @commands.group(aliases=['maps'], invoke_without_command=True)
+    @commands.group(aliases=['maps', 'Map'], invoke_without_command=True)
     async def map(self, ctx):
         map_list = discord.Embed(
             color=0x0AFF81
