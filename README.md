@@ -14,10 +14,12 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 ```
 ## COMMAND LIST
 
-|  Command  | description |
-| -----------------  | ---------------------------------  |
+|  Command           | description                             |
+| -----------------  | ---------------------------------       |
 | vstat <region_name>| Shows valorant server of <region_name>  |
-| agent <agent_name> | Shows description of <agent_name>  |
+| agent <agent_name> | Shows description of <agent_name>       |
+| map <map_name>     | Shows description of <map_name>         |
+| invite             | Invite the bot to your server           |
 
 
 
