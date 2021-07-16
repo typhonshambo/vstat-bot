@@ -13,6 +13,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 }
 ```
 ## COMMAND LIST
+whats is the value of pi
 
 |  Command           | description                             |
 | -----------------  | ---------------------------------       |
@@ -44,6 +45,10 @@ pip install discord.py
 ```python
 pip install valoStatus
 ```
+
+## SCREENSHOTS
+
+<img src="https://media.discordapp.net/attachments/864780326357827585/865498761430040586/qguSfRKTRS.gif?width=383&height=183" width="425"/> <img src="https://media.discordapp.net/attachments/864780326357827585/865498765908901908/FJKk89Jqps.gif?width=378&height=288" width="425"/> 
 
 ## SUPPORT SERVER
 [<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  [click here](https://discord.gg/m5mSyTV7RR)
