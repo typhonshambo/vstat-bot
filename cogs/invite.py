@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import json
 
-with open ('config\config.json', 'r') as f:
+with open ('././config/config.json', 'r') as f:
     config = json.load(f)
     prefix = config['prefix']
 

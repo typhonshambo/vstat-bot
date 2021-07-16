@@ -5,7 +5,7 @@ import sys
 import json 
 import requests
 
-with open ('config\config.json', 'r') as f:
+with open ('config/config.json', 'r') as f:
     config = json.load(f)
     token = config['token']
     prefix = config['prefix']
@@ -29,7 +29,7 @@ async def on_ready():
 
 
 
-with open ('extension\extension.json', 'r') as data:
+with open ('extension/extension.json', 'r') as data:
     cog_data = json.load(data)
     extension = cog_data['extension']
 
