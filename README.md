@@ -13,7 +13,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 }
 ```
 ## COMMAND LIST
-whats is the value of pi
+
 
 |  Command           | description                             |
 | -----------------  | ---------------------------------       |
