@@ -90,6 +90,7 @@ pip install valoStatus
 <td>Dark-pheonix-tech</td>
 <td>Cosmic string#0001</td>
 </tr>
+</tr>
 </tbody>
 </table>
 
