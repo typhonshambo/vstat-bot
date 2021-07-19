@@ -22,8 +22,8 @@ class skin(commands.Cog):
     async def patch(self, message):
         await message.channel.send("Find the patch notes for the recent patch here: https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-1-03/")
 
-    @commands.command(aliases=['gun'])
-    async def guns(self, ctx, message:str):
+    @commands.command(aliases=['skins','Skins','Skin'])
+    async def skin(self, ctx, message:str):
  
         valorantGuns = ["classic", "shorty", "frenzy", "ghost", "sheriff", "stinger", "spectre", "bucky", "judge", "bulldog",
                         "guardian", "vandal", "phantom", "marshall", "operator", "odin", "ares"]
@@ -53,8 +53,8 @@ class skin(commands.Cog):
         except:
             await ctx.channel.send("Gun does not exist")        
 
-    @guns.error
-    async def guns_error(self, ctx, error):
+    @skin.error
+    async def skin_error(self, ctx, error):
         if isinstance(error, commands.CommandError):
             embed = discord.Embed(
                 description='',

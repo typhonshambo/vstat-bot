@@ -5,6 +5,7 @@
         "cogs.agents",
         "cogs.help",
         "cogs.maps",
-        "cogs.invite"
+        "cogs.invite",
+        "cogs.weapon"
     ]
 }

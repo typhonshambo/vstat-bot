@@ -4,6 +4,7 @@ import traceback
 import sys
 import json 
 import requests
+from discord_components import *
 
 with open ('config/config.json', 'r') as f:
     config = json.load(f)
@@ -26,6 +27,7 @@ async def on_ready():
         activity=discord.Activity(type=discord.ActivityType.watching, name=f"{prefix}vstat")
     )
     print("Bot online!")
+    DiscordComponents(bot)
 
 
 
