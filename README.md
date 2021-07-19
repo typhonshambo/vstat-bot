@@ -1,7 +1,7 @@
 # <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
 
 
-A discord bot made with ❤️ by <b>TYPHON GAMERS</b>, <br>
+A discord bot made with ❤️ 
 That can :<br>
 <ul>
     <li>Show current server <b>status</b> of valorant for a given region, whether the servers are <b>UP or DOWN</b> </li>
