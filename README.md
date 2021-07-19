@@ -1,8 +1,19 @@
 # <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
 
 
-A discord bot that will show current server status of valorant for a given region, whether the servers are UP or DOWN
+A discord bot made with ❤️ by <b>TYPHON GAMERS</b>, <br>
+That can :<br>
+<ul>
+    <li>Show current server <b>status</b> of valorant for a given region, whether the servers are <b>UP or DOWN</b> </li>
+    <li>Show <b> description of maps </b> </li>
+    <li>Show <b> description of agents </b> </li>
+    <li>Show <b> information about Weapons</b> </li>   
+</ul>
+
+More Things coming... stay tuned to find out :)
+
 ## INSTALLATION
+
 make sure to put the necessary keys in `config.json` file [present here](https://github.com/typhonshambo/Valorant-server-stat-bot/blob/main/config/config.json) for the bot to work properly.
 
 ```json
@@ -27,12 +38,12 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 
 ## REGION LIST
 ```css
-NA - North America
-EU - Europe
-BR - Brazil
-AP - Asia Pacific
-KR - Korea
-LATAM - Latin America
+NA      - North America
+EU      - Europe
+BR      - Brazil
+AP      - Asia Pacific
+KR      - Korea
+LATAM   - Latin America
 ```
 
 ## REQUIRED PACKAGES
@@ -52,7 +63,7 @@ pip install valoStatus
 <img src="https://media.discordapp.net/attachments/864780326357827585/865498761430040586/qguSfRKTRS.gif?width=383&height=183" width="425"/> <img src="https://media.discordapp.net/attachments/864780326357827585/865498772309016596/kLT8b34NgH.gif?width=510&height=470" width="425"/> <img src="https://media.discordapp.net/attachments/864780326357827585/865498769260150784/KHEjo5qpa0.gif?width=515&height=472" width="425"/>
 
 ## SUPPORT SERVER
-[<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR)  [click here](https://discord.gg/m5mSyTV7RR)
+[<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR) TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 ## Contributors
 
 <p>&nbsp;</p>
