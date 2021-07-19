@@ -86,6 +86,10 @@ pip install valoStatus
 <td>MAGNUM</td>
 <td>&nbsp;MAGNUM#6969</td>
 </tr>
+<tr>
+<td>Dark-pheonix-tech</td>
+<td>&nbsp;Cosmic string#0001</td>
+</tr>
 </tbody>
 </table>
 
