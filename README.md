@@ -66,33 +66,13 @@ pip install valoStatus
 [<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR) TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 ## Contributors
 
-<p>&nbsp;</p>
-<table class="blueTable">
-<thead>
-<tr>
-<th>NAME</th>
-<th>DISCORD ID</th>
-</tr>
-</thead>
-<tfoot>
-<tr>
 
-<tbody>
-<tr>
-<td>SHAMBO</td>
-<td>! TYPHON | SHAMBO#0001</td>
-</tr>
-<tr>
-<td>MAGNUM</td>
-<td>&nbsp;MAGNUM#6969</td>
-</tr>
-<tr>
-<td>Dark-pheonix-tech</td>
-<td>Cosmic string#0001</td>
-</tr>
-</tr>
-</tbody>
-</table>
+
+|  NAME                   |  DISCORD                                |
+| ------------------------| --------------------------------------- |
+|  SHAMBO                 | ! TYPHON | SHAMBO#0001                  |
+|  MAGNUM                 | MAGNUM#6969                             |
+|  Dark-pheonix-tech      | Cosmic string#0001                      |
 
 ## Donation
 [![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
