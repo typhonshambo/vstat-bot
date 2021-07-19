@@ -21,6 +21,7 @@ whats is the value of pi
 | agent <agent_name> | Shows description of <agent_name>       |
 | map <map_name>     | Shows description of <map_name>         |
 | invite             | Invite the bot to your server           |
+| weapon <name>      | Shows description of weapon             |
 
 
 
