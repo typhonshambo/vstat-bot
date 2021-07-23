@@ -49,6 +49,7 @@ LATAM   - Latin America
 ## REQUIRED PACKAGES
  - discord.py
  - valoStatus
+ - discord-components
 
 you can run these commands in CMD to install the packages
 ```python
@@ -56,6 +57,9 @@ pip install discord.py
 ```
 ```python
 pip install valoStatus
+```
+```python
+pip install discord-components
 ```
 ## Bot Link
 here is one ready made bot, which you can add in your server :)
