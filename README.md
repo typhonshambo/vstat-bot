@@ -70,7 +70,8 @@ here is one ready made bot, which you can add in your server :)
 <img src="https://media.discordapp.net/attachments/864780326357827585/865498769260150784/KHEjo5qpa0.gif?width=515&height=472" width="425"/>
 
 ## SUPPORT SERVER
-<img src = "https://img.shields.io/discord/556197206147727391.svg?style=for-the-badge">(https://discord.gg/m5mSyTV7RR) TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
+<img src = "https://img.shields.io/discord/556197206147727391.svg?style=for-the-badge">
+TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 ## Contributors
 
 
