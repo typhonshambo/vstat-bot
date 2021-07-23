@@ -72,6 +72,8 @@ here is one ready made bot, which you can add in your server :)
 ## SUPPORT SERVER
 <img src = "https://img.shields.io/discord/556197206147727391.svg?style=for-the-badge">
 TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
+
+
 ## Contributors
 
 
