@@ -74,6 +74,8 @@ pip install valoStatus
 |  MAGNUM                 | MAGNUM#6969                             |
 |  Dark-pheonix-tech      | Cosmic string#0001                      |
 
+![GitHub Contributors Image](https://contrib.rocks/image?repo=typhonshambo/Valorant-server-stat-bot)
+
 ## Donation
 [![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
 
