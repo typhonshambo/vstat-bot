@@ -60,7 +60,7 @@ pip install valoStatus
 ## Bot Link
 here is one ready made bot, which you can add in your server :)
 
-![](https://discord-md-badge.vercel.app/api/shield/Vstat#9743)
+![](https://discord-md-badge.vercel.app/api/shield/864451929346539530)
 [click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
 
 
