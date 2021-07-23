@@ -57,10 +57,18 @@ pip install discord.py
 ```python
 pip install valoStatus
 ```
+## Bot Link
+here is one ready made bot, which you can add in your server :)
+
+![](https://discord-md-badge.vercel.app/api/shield/Vstat#9743)
+[click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
+
 
 ## SCREENSHOTS
 
-<img src="https://media.discordapp.net/attachments/864780326357827585/865498761430040586/qguSfRKTRS.gif?width=383&height=183" width="425"/> <img src="https://media.discordapp.net/attachments/864780326357827585/865498772309016596/kLT8b34NgH.gif?width=510&height=470" width="425"/> <img src="https://media.discordapp.net/attachments/864780326357827585/865498769260150784/KHEjo5qpa0.gif?width=515&height=472" width="425"/>
+<img src="https://media.discordapp.net/attachments/864780326357827585/865498761430040586/qguSfRKTRS.gif?width=383&height=183" width="425"/> 
+<img src="https://media.discordapp.net/attachments/864780326357827585/865498772309016596/kLT8b34NgH.gif?width=510&height=470" width="425"/> 
+<img src="https://media.discordapp.net/attachments/864780326357827585/865498769260150784/KHEjo5qpa0.gif?width=515&height=472" width="425"/>
 
 ## SUPPORT SERVER
 [<img src='https://raw.githubusercontent.com/anuraghazra/anuraghazra/master/assets/discord-round.svg' alt='twitter' height='40'>](https://discord.gg/m5mSyTV7RR) TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
@@ -79,5 +87,4 @@ pip install valoStatus
 ## Donation
 [![paypal.me/typhonshambo](https://ionicabizau.github.io/badges/paypal.svg)](https://www.paypal.me/typhonshambo) - Buy me a coffee ❤️
 
-## Bot Link
-[click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
+
