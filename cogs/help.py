@@ -21,6 +21,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}map <name>` - shows info regarding valorant maps
             :small_blue_diamond: `{prefix}invite` - Get the bot invite link
             :small_blue_diamond: `{prefix}weapon <name>` - Get info of a weapon
+            :small_blue_diamond: `{prefix}ace` - Get ace sounds of bundles
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -119,6 +120,24 @@ class help(commands.Cog):
         invite_help.add_field(name ="USAGE", value =f"""
         It will show details regarding a weapon
         to get list of weapon use `{prefix}wplist`
+        """, inline=False)
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=invite_help)
+
+    @help.command(aliases=['as', 'ace'])
+    async def acesound(self, ctx):
+        invite_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}acesound",
+            description=f"full command = `{prefix}acesound`"
+        )
+        invite_help.add_field(name ="ALIASES", value=f"""
+        :white_small_square: `{prefix}as`
+        :white_small_square: `{prefix}ace`
+        """, inline=False)
+        invite_help.add_field(name ="USAGE", value =f"""
+        It will send the ace sound of some popular collections
         """, inline=False)
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   

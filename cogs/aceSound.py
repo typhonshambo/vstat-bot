@@ -36,7 +36,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://cdn.oneesports.gg/cdn-data/wp-content/uploads/sites/2/2020/12/BlastX_Graphic-1024x576.jpg")
 				embed.set_author(name="blastX",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\\blastX.mp3")
+				file = discord.File("././assets/acesound/blastX.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928149554077726/blastX.mp3")])
@@ -50,7 +50,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Elderflame-Collection-HD.jpg")
 				embed.set_author(name="Enderflame",icon_url="https://cdn.discordapp.com/attachments/868928100048728136/868928149663146044/Enderflame.mp3")
 				
-				file = discord.File("assets\\acesound\Enderflame.mp3")
+				file = discord.File("././assets/acesound/Enderflame.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928149554077726/blastX.mp3")])
@@ -63,7 +63,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/08/Valorant-Glitchpop-Collection-HD-1024x576.jpg")
 				embed.set_author(name="Glitchpop",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\glitchpop.mp3")
+				file = discord.File("././assets/acesound/glitchpop.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928150787215421/glitchpop.mp3")])
@@ -77,7 +77,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/11/Valorant-Ion-Collection-HD.jpg")
 				embed.set_author(name="Ion",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\Ion.mp3")
+				file = discord.File("././assets/acesound/Ion.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928151898689556/Ion.mp3")])
@@ -91,7 +91,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Oni-Collection-HD.jpg")
 				embed.set_author(name="Oni",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\oni.mp3")
+				file = discord.File("././assets/acesound/oni.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928135318630441/oni.mp3")])
@@ -105,7 +105,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Prime-Collection.jpg")
 				embed.set_author(name="Prime",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\prime.mp3")
+				file = discord.File("././assets/acesound/prime.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928140578259005/prime.mp3")])
@@ -119,7 +119,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2021/03/Valorant-Prime-2-Collection-HD.jpg")
 				embed.set_author(name="Prime 2.0",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\Prime 2.0.mp3")
+				file = discord.File("././assets/acesound/Prime 2.0.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928139156406333/Prime_2.0.mp3")])
@@ -133,7 +133,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/10/Valorant-Reaver-Collection-HD.jpg")
 				embed.set_author(name="Reaver",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\Reaver.mp3")
+				file = discord.File("././assets/acesound/Reaver.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928143010975744/Reaver.mp3")])
@@ -148,7 +148,7 @@ class aceSound(commands.Cog):
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Sovereign-Collection-HD.jpg")
 				embed.set_author(name="Sovereign",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
-				file = discord.File("assets\\acesound\Sovereign.mp3")
+				file = discord.File("././assets/acesound/Sovereign.mp3")
 				
 				await ctx.send(embed=embed)
 				await ctx.send(file=file, components=[Button(label="Download", style=5, url="https://cdn.discordapp.com/attachments/868928100048728136/868928146706137098/Sovereign.mp3")])
