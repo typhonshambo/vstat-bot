@@ -1,4 +1,4 @@
 beautifulsoup4==4.9.3
 DiscordUtils==1.3.4
 valoStatus==3.2.15
-discord_components==1.7.1
+discord_components==1.1.4

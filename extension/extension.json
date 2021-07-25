@@ -7,5 +7,6 @@
         "cogs.maps",
         "cogs.invite",
         "cogs.weapon"
+        "cogs.aceSound"
     ]
 }
