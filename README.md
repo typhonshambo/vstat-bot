@@ -32,8 +32,9 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 | agent <agent_name>       | Shows description of <agent_name>       |
 | map <map_name>           | Shows description of <map_name>         |
 | weapon <weapon_name>     | Shows description of weapon             |
-| invite                   | Invite the bot to your server           |    
-    
+| invite                   | Invite the bot to your server           |  
+| ace                      | send ace sounds of different skins      |
+| skin                     | shows info regarding skins              |
 
 
 ## REGION LIST
