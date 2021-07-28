@@ -31,7 +31,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="blastX":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="BlastX"
+					
 				)
 				embed.set_image(url="https://cdn.oneesports.gg/cdn-data/wp-content/uploads/sites/2/2020/12/BlastX_Graphic-1024x576.jpg")
 				embed.set_author(name="blastX",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -45,10 +45,10 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Enderflame":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Enderflame"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Elderflame-Collection-HD.jpg")
-				embed.set_author(name="Enderflame",icon_url="https://cdn.discordapp.com/attachments/868928100048728136/868928149663146044/Enderflame.mp3")
+				embed.set_author(name="Enderflame",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
 				
 				file = discord.File("././assets/acesound/Enderflame.mp3")
 				
@@ -58,7 +58,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="glitchpop":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Glitchpop"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/08/Valorant-Glitchpop-Collection-HD-1024x576.jpg")
 				embed.set_author(name="Glitchpop",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -72,7 +72,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Ion":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Ion"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/11/Valorant-Ion-Collection-HD.jpg")
 				embed.set_author(name="Ion",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -86,7 +86,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Oni":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Oni"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/07/Valorant-Oni-Collection-HD.jpg")
 				embed.set_author(name="Oni",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -100,7 +100,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Prime":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Prime"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Prime-Collection.jpg")
 				embed.set_author(name="Prime",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -114,7 +114,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Prime 2.0":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Prime 2.0"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2021/03/Valorant-Prime-2-Collection-HD.jpg")
 				embed.set_author(name="Prime 2.0",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -128,7 +128,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Reaver":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Reaver"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/10/Valorant-Reaver-Collection-HD.jpg")
 				embed.set_author(name="Reaver",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
@@ -143,7 +143,7 @@ class aceSound(commands.Cog):
 			if _res.component[0].value=="Sovereign":
 				embed = discord.Embed(
 					color=0x0AFFE9,
-					title="Sovereign"
+					
 				)
 				embed.set_image(url="https://valorantstrike.com/wp-content/uploads/2020/06/Valorant-Sovereign-Collection-HD.jpg")
 				embed.set_author(name="Sovereign",icon_url="https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif")
