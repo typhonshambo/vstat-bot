@@ -24,7 +24,7 @@ bot.remove_command('help')
 async def on_ready():
     await bot.change_presence(
         status=discord.Status.idle, 
-        activity=discord.Activity(type=discord.ActivityType.watching, name=f"{prefix}vstat")
+        activity=discord.Activity(type=discord.ActivityType.watching, name=f"{prefix}help")
     )
     print("Bot online!")
     DiscordComponents(bot)
