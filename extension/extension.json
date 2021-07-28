@@ -6,7 +6,7 @@
         "cogs.help",
         "cogs.maps",
         "cogs.invite",
-        "cogs.weapon"
+        "cogs.weapon",
         "cogs.aceSound"
     ]
 }
