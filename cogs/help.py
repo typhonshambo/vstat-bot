@@ -22,6 +22,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}invite` - Get the bot invite link
             :small_blue_diamond: `{prefix}weapon <name>` - Get info of a weapon
             :small_blue_diamond: `{prefix}ace` - Get ace sounds of bundles
+            :small_blue_diamond: `{prefix}skin` - shows info regarding skins
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -138,6 +139,26 @@ class help(commands.Cog):
         """, inline=False)
         invite_help.add_field(name ="USAGE", value =f"""
         It will send the ace sound of some popular collections
+        """, inline=False)
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=invite_help)
+
+
+    @help.command(aliases=['skins'])
+    async def skin(self, ctx):
+        invite_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}skin",
+            description=f"full command = `{prefix}skin`"
+        )
+        invite_help.add_field(name ="ALIASES", value=f"""
+        :white_small_square: `{prefix}skins`
+        """, inline=False)
+        invite_help.add_field(name ="USAGE", value =f"""
+        It will send the information related to any skin
+        that you would like to see.
+        To see list of guns use `{prefix}gunl`
         """, inline=False)
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
