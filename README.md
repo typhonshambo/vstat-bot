@@ -35,7 +35,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 | invite                   | Invite the bot to your server           |  
 | ace                      | send ace sounds of different skins      |
 | skin                     | shows info regarding skins              |
-
+| ------------------------ | --------------------------------------- |
 
 ## REGION LIST
 ```css
