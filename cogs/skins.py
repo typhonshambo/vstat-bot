@@ -1749,7 +1749,7 @@ class skin(commands.Cog):
                         color = discord.Color.green()
                     )
                     embed.add_field(name ="Availability",value="Price: 1,775 [VP]")
-                    embed.set_image(url="https://liquipedia.net/commons/images/6/6b/Vandal_horizon_VALORANT.png")
+                    embed.set_image(url="https://liquipedia.net/commons/images/8/85/Vandal_prime_VALORANT.png")
                     await ctx.send(embed=embed,components=[Button(label="More", style=5, url="https://liquipedia.net/valorant/Vandal/Skins")]) 
    
                 if _res.component[0].value=="Avalanche Vandal":
