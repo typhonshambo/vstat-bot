@@ -23,6 +23,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}weapon <name>` - Get info of a weapon
             :small_blue_diamond: `{prefix}ace` - Get ace sounds of bundles
             :small_blue_diamond: `{prefix}skin` - shows info regarding skins
+            :small_blue_diamond: `{prefix}spec` - shows PC requirements of Valorant
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -163,6 +164,25 @@ class help(commands.Cog):
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
+    
+    @help.command(aliases=['specs','spec'])
+    async def specification(self, ctx):
+        invite_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}specification",
+            description=f"full command = `{prefix}specification`"
+        )
+        invite_help.add_field(name ="ALIASES", value=f"""
+        :white_small_square: `{prefix}spec`
+        :white_small_square: `{prefix}specs`
+        """, inline=False)
+        invite_help.add_field(name ="USAGE", value =f"""
+        It will show PC requirements for Valorant
+        """, inline=False)
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=invite_help)
+
 
 def setup(client):
     client.add_cog(help(client))
