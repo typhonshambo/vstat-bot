@@ -3112,4 +3112,4 @@ class skin(commands.Cog):
 
 def setup(bot):
     bot.add_cog(skin(bot))
-    print("skins        | Imported")        
+    print("skins        | Imported")
