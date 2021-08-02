@@ -37,6 +37,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 | skin                     | shows info regarding skins              |
 | spec                     | shows specs required for valorant       |
 | shop                     | shows your valorant shop of you account |
+| login                    | Login to you valorant acc to show shop  |
 
 
 ## REGION LIST
