@@ -20,7 +20,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 {
     "token":"PUT_YOUR_TOKEN_HERE",
     "prefix": "!",
-    "AUTH_TOKEN": "PUT_YOU_RIOT_API_KEY_HERE"
+    "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE"
 }
 ```
 ## COMMAND LIST
@@ -36,6 +36,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 | ace                      | send ace sounds of different skins      |
 | skin                     | shows info regarding skins              |
 | spec                     | shows specs required for valorant       |
+| shop                     | shows your valorant shop of you account |
 
 
 ## REGION LIST
