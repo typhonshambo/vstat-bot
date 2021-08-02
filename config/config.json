@@ -1,5 +1,5 @@
 {
     "token":"PUT_YOUR_TOKEN_HERE",
     "prefix": "!",
-    "AUTH_TOKEN": "PUT_YOU_RIOT_API_KEY_HERE"
+    "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE"
 }

@@ -16,6 +16,7 @@ class help(commands.Cog):
             color=0x0AFF4D,
             title="COMMAND LIST",
             description=f"""
+            **GENERAL**
             :small_blue_diamond: `{prefix}vstat <region>` - shows server status of a region
             :small_blue_diamond: `{prefix}agent <name>` - shows info regarding agents
             :small_blue_diamond: `{prefix}map <name>` - shows info regarding valorant maps
@@ -24,6 +25,10 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}ace` - Get ace sounds of bundles
             :small_blue_diamond: `{prefix}skin` - shows info regarding skins
             :small_blue_diamond: `{prefix}spec` - shows PC requirements of Valorant
+
+            **SHOP**
+            :small_blue_diamond: `{prefix}login` - login to you valorant account
+            :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -183,6 +188,46 @@ class help(commands.Cog):
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
+    @help.command()
+    async def login(self, ctx):
+        invite_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}login",
+            description=f"full command = `{prefix}login`"
+        )
+
+        invite_help.add_field(name ="USAGE", value =f"""
+        It will login into your valorant account,
+        so that you can access shop using `{prefix}shop` in discord
+
+        **NOTE**
+        The developers and the staff of this bot 
+        do not have access to you valorant credentials
+        they are all ENCRYPTED, so no need to worry :)
+        """, inline=False)
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=invite_help)
+
+    @help.command()
+    async def shop(self, ctx):
+        invite_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}shop",
+            description=f"full command = `{prefix}shop`"
+        )
+
+        invite_help.add_field(name ="USAGE", value =f"""
+        It will show items available in your shop ingame
+
+        **NOTE**
+        You need to login to your valorant account first
+        before you can use this command.
+        use `{prefix}login` to login to your valorant account
+        """, inline=False)
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=invite_help)
 
 def setup(client):
     client.add_cog(help(client))

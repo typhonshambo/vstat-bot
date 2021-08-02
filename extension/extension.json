@@ -8,6 +8,7 @@
         "cogs.invite",
         "cogs.weapon",
         "cogs.aceSound",
-        "cogs.specs"
+        "cogs.specs",
+        "cogs.itemshop"
     ]
 }
