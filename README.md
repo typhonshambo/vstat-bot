@@ -5,6 +5,7 @@ A discord bot made with ❤️
 That can :<br>
 <ul>
     <li>Show current server <b>status</b> of valorant for a given region, whether the servers are <b>UP or DOWN</b> </li>
+    <li>Show <b> Your ingame SHOP in discord </b> </li>
     <li>Show <b> description of maps </b> </li>
     <li>Show <b> description of agents </b> </li>
     <li>Show <b> information about Weapons</b> </li>   
