@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from .valinfo import getValorantInfo
 from discord.ext.commands import MissingRequiredArgument
 import json
 from discord_components import *
