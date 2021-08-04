@@ -103,14 +103,6 @@ TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 
 ## Contributors
 
-
-
-|  NAME                   |  DISCORD                                |
-| ------------------------| --------------------------------------- |
-|  SHAMBO                 | ! TYPHON | SHAMBO#0001                  |
-|  MAGNUM                 | MAGNUM#6969                             |
-|  Dark-pheonix-tech      | Cosmic string#0001                      |
-
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=typhonshambo/Valorant-server-stat-bot)
 
 ## Donation
