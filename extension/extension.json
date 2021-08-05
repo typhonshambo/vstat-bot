@@ -9,6 +9,7 @@
         "cogs.weapon",
         "cogs.aceSound",
         "cogs.specs",
-        "cogs.itemshop"
+        "cogs.itemshop",
+        "cogs.bundles"
     ]
 }

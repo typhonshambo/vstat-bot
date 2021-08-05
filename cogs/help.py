@@ -29,6 +29,10 @@ class help(commands.Cog):
             **SHOP**
             :small_blue_diamond: `{prefix}login` - login to you valorant account
             :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
+
+            **BUNDLE**
+            :small_blue_diamond: `{prefix}bundle <name>` - show image of bundle with <name>
+            :small_blue_diamond: `{prefix}bunl <name>` - show list of bundles available in game
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -228,6 +232,43 @@ class help(commands.Cog):
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
+
+    @help.command(aliases=['bunl'])
+    async def bundlelist(self, ctx):
+        bundle_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}bundlelist",
+            description=f"full command = `{prefix}bundlelist`"
+        )
+        bundle_help.add_field(name ="ALIASES", value=f"""
+        :white_small_square: `{prefix}bunl`
+        """, inline=False)
+
+        bundle_help.add_field(name ="USAGE", value =f"""
+        It will show items list of available bundles in valorant 
+        """, inline=False)
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=bundle_help)
+    
+    @help.command()
+    async def bundle(self, ctx):
+        bundle_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}bundle",
+            description=f"full command = `{prefix}bundle <name>`"
+        )
+
+        bundle_help.add_field(name ="USAGE", value =f"""
+        It will show image of the bundle that has been given in place
+        of <name>
+
+        To get the list of bundles use `{prefix}bunl`
+        """, inline=False)
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=bundle_help)
+
 
 def setup(client):
     client.add_cog(help(client))
