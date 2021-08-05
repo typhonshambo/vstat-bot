@@ -26,7 +26,7 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
 ```
 ### DATABASE NOTE
 
-Here for the bot we are using POSTGRES SQL DATABASE, if the database URL is not provided `in config.json` the `shop` command will not work.
+Here for the bot we are using `POSTGRES SQL DATABASE`, if the database URL is not provided `in config.json` the `shop` command will not work.
 If you dont know how to make a postgres database feel free to learn it from youtube or anywhere else. You can also make one postgres SQL DB in heroku
 it is easy to do :)
 
@@ -102,14 +102,6 @@ TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 
 
 ## Contributors
-
-
-
-|  NAME                   |  DISCORD                                |
-| ------------------------| --------------------------------------- |
-|  SHAMBO                 | ! TYPHON | SHAMBO#0001                  |
-|  MAGNUM                 | MAGNUM#6969                             |
-|  Dark-pheonix-tech      | Cosmic string#0001                      |
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=typhonshambo/Valorant-server-stat-bot)
 
