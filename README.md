@@ -55,6 +55,9 @@ Your database must contain a table called `riotpwd` and the table should contain
 | spec                     | shows specs required for valorant       |
 | shop                     | shows your valorant shop of you account |
 | login                    | Login to you valorant acc to show shop  |
+| bunl                     | show list of all available skin bundles |
+| bundle <name>            | show info of <name> bundle              |
+
 
 
 ## REGION LIST
