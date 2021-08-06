@@ -111,7 +111,10 @@ class itemshop(commands.Cog):
                     embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}")
                     embed.set_image(url=skin_data["skin4_image"])
                     await ctx.send(embed=embed)
+                    
+                
                 except:
+                    await ctx.send("Loading complete!")
                     pass
         except:
             embed= discord.Embed(
