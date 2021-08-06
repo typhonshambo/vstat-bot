@@ -5,6 +5,7 @@ import asyncio
 from discord.ext import commands
 import json 
 from .utils.shop_utils import username_to_data,getVersion,priceconvert,skins,check_item_shop
+from discord_components import *
 
 with open ('././config/config.json', 'r') as f:
     config = json.load(f)
@@ -86,44 +87,66 @@ class itemshop(commands.Cog):
         found = False
 
         not_user = await self.client.pg_con.fetch("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
-        
-        if user:
-            await ctx.send("Loading shop...")
-            user_data = username_to_data(username, password)
-            access_token = user_data[0]
-            entitlements_token = user_data[1]
-            user_id = user_data[2]
-            skin_data = skins(entitlements_token, access_token, user_id)
-            embed = discord.Embed(title=skin_data["bundle_name"])
-            embed.set_image(url=skin_data["bundle_image"])
-            await ctx.send(embed=embed)
-            try:
-                embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}")
-                embed.set_image(url=skin_data["skin1_image"])
+        try: 
+            if user:
+                await ctx.send("Loading shop...")
+                user_data = username_to_data(username, password)
+                access_token = user_data[0]
+                entitlements_token = user_data[1]
+                user_id = user_data[2]
+                skin_data = skins(entitlements_token, access_token, user_id)
+                embed = discord.Embed(title=skin_data["bundle_name"])
+                embed.set_image(url=skin_data["bundle_image"])
                 await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}")
-                embed.set_image(url=skin_data["skin2_image"])
-                await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}")
-                embed.set_image(url=skin_data["skin3_image"])
-                await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}")
-                embed.set_image(url=skin_data["skin4_image"])
-                await ctx.send(embed=embed)
-            except TypeError:
-                embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}",)
-                embed.set_image(url=skin_data["skin1_image"])
-                await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}",)
-                embed.set_image(url=skin_data["skin2_image"])
-                await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}",)
-                embed.set_image(url=skin_data["skin3_image"])
-                await ctx.send(embed=embed)
-                embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}",)
-                embed.set_image(url=skin_data["skin4_image"])
-                await ctx.send(embed=embed)
-
+                try:
+                    embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}")
+                    embed.set_image(url=skin_data["skin1_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}")
+                    embed.set_image(url=skin_data["skin2_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}")
+                    embed.set_image(url=skin_data["skin3_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}")
+                    embed.set_image(url=skin_data["skin4_image"])
+                    await ctx.send(embed=embed)
+                except TypeError:
+                    embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}",)
+                    embed.set_image(url=skin_data["skin1_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}",)
+                    embed.set_image(url=skin_data["skin2_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}",)
+                    embed.set_image(url=skin_data["skin3_image"])
+                    await ctx.send(embed=embed)
+                    embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}",)
+                    embed.set_image(url=skin_data["skin4_image"])
+                    await ctx.send(embed=embed)
+        except:
+            embed= discord.Embed(
+                color=discord.Color.red()
+            )
+            embed.add_field(name ="SOME ERROR OCCURED...",value="""
+            Either your `username` or your `password` is incorrect.
+            """,inline=False)
+            embed.add_field(name ="also note that", value="""
+```
+The item shop is only available for NA region players.
+We are working on the other regions and it will be available soon
+```
+            """, inline=False)
+            embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
+            await ctx.send(
+                embed=embed,
+                components=[
+                    [
+                        Button(label="Support Server", style=5, url="https://discord.gg/m5mSyTV7RR"),
+                        Button(label="Vote", style=5, url="https://top.gg/bot/864451929346539530/vote")
+                    ]
+                ]
+            )
 
 
 
