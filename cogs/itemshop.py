@@ -111,19 +111,8 @@ class itemshop(commands.Cog):
                     embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}")
                     embed.set_image(url=skin_data["skin4_image"])
                     await ctx.send(embed=embed)
-                except TypeError:
-                    embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}",)
-                    embed.set_image(url=skin_data["skin1_image"])
-                    await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}",)
-                    embed.set_image(url=skin_data["skin2_image"])
-                    await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}",)
-                    embed.set_image(url=skin_data["skin3_image"])
-                    await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}",)
-                    embed.set_image(url=skin_data["skin4_image"])
-                    await ctx.send(embed=embed)
+                except:
+                    pass
         except:
             embed= discord.Embed(
                 color=discord.Color.red()
