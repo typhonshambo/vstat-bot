@@ -26,9 +26,11 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}skin` - shows info regarding skins
             :small_blue_diamond: `{prefix}spec` - shows PC requirements of Valorant
 
-            **SHOP**
+
+            **PLAYER STAT**
             :small_blue_diamond: `{prefix}login` - login to you valorant account
             :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
+            :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
 
             **BUNDLE**
             :small_blue_diamond: `{prefix}bundle <name>` - show image of bundle with <name>
@@ -264,6 +266,26 @@ class help(commands.Cog):
         of <name>
 
         To get the list of bundles use `{prefix}bunl`
+        """, inline=False)
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=bundle_help)
+
+    @help.command()
+    async def rank(self, ctx):
+        bundle_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}rank",
+            description=f"full command = `{prefix}rank`"
+        )
+
+        bundle_help.add_field(name ="USAGE", value =f"""
+        It will show your rank and some other stats
+
+        **NOTE**
+        You need to login to your valorant account first
+        before you can use this command.
+        use `{prefix}login` to login to your valorant account
         """, inline=False)
         bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   

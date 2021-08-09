@@ -37,6 +37,27 @@ class itemshop(commands.Cog):
                     
                     await self.client.pg_con.execute("UPDATE riotpwd SET password = $1 WHERE user_id = $2",password[1], author_id)
                     await message.channel.send("Successfully updated your password")
+                
+                if message.content.startswith('region='):
+                    region = message.content.split('=')
+                    
+                    await self.client.pg_con.execute("UPDATE riotpwd SET region = $1 WHERE user_id = $2",region[1], author_id)
+                    await message.channel.send("Successfully updated your region")
+                
+                if message.content.startswith('!reglist'):
+                    embed = discord.Embed(
+                        color= discord.Color.blue()
+                    )
+                    embed.add_field(name ="REGION LIST",value="""
+                        `na` - North America
+                        `eu` - Europe
+                        `br` - Brazil
+                        `ap` - Asia Pacific
+                        `kr` - Korea
+                        `latam` - Latin America
+                    """,inline=False)
+                    await message.channel.send(embed=embed)
+                
     
     @commands.command()
     async def login(self, ctx):
@@ -52,6 +73,7 @@ class itemshop(commands.Cog):
         )
         dm_embed.add_field(name ="**username**",value="Enter you valorant username\nfor example \n`username=typhonshambo` if you username is typhonshambo",inline=False)
         dm_embed.add_field(name ="**password**",value="Enter you valorant password\nfor example \n`password=123` if you username is 123",inline=False)
+        dm_embed.add_field(name ="**region**",value="Enter you valorant region\nfor example \n`region=ap` if you region is ap\n to get region list use `!reglist` here",inline=False)
         dm_embed.add_field(name="NOTE",value ="You need to enter you `username` **first** if you are new here!!\nAnd if you write the username or password incorrect \ntype again the same thing to change it")
 
         await ctx.author.send(embed=dm_embed)
