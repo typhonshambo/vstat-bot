@@ -31,6 +31,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}login` - login to you valorant account
             :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
             :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
+            :small_blue_diamond: `{prefix}profile` - show your profile
 
             **BUNDLE**
             :small_blue_diamond: `{prefix}bundle <name>` - show image of bundle with <name>
@@ -290,6 +291,31 @@ class help(commands.Cog):
         bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
+
+    @help.command()
+    async def profile(self, ctx):
+        bundle_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}profile",
+            description=f"full command = `{prefix}profile`"
+        )
+
+        bundle_help.add_field(name ="USAGE", value =f"""
+        It will show some stats regarding your profile
+        like - your K/D, Win Rate, Number of Hours you played etc.
+
+        **NOTE**
+        You need to login to your valorant account first
+        before you can use this command.
+        use `{prefix}login` to login to your valorant account
+
+        Also you need to be logged into the tracker.gg
+        [click here](https://cutt.ly/MQIpIBz) to login
+        """, inline=False)
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=bundle_help)
+
 
 
 def setup(client):

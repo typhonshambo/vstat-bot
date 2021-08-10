@@ -42,5 +42,4 @@ def getrank(region, user_id):
     whole_data = req_data.json()
 
     
-    print(whole_data)
     return whole_data

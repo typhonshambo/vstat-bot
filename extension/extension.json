@@ -11,6 +11,7 @@
         "cogs.specs",
         "cogs.itemshop",
         "cogs.bundles",
-        "cogs.rank"
+        "cogs.rank",
+        "cogs.profile"
     ]
 }
