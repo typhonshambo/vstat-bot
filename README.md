@@ -40,6 +40,12 @@ Your database must contain a table called `riotpwd` and the table should contain
 | username                 | character varying                       |
 | password                 | character varying                       |
 
+### COMMANDS INTEGRATED WITH DATABASE
+
+- profile
+- rank
+ 
+
 ## COMMAND LIST
 
 
