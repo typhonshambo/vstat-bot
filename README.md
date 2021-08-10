@@ -57,6 +57,8 @@ Your database must contain a table called `riotpwd` and the table should contain
 | login                    | Login to you valorant acc to show shop  |
 | bunl                     | show list of all available skin bundles |
 | bundle <name>            | show info of <name> bundle              |
+| rank                     | show rank in valorant                   |
+| Profile                  | show your profile (K/d, rank, win rate) |
 
 
 
