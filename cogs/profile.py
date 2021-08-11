@@ -100,7 +100,7 @@ class profile(commands.Cog):
             """,inline=False)
             embed.add_field(name="ALSO MAKE SURE THAT..",value="""
             you are logged in into tracker.gg, because profile command is powered by tracker.gg
-            to login [click here](https://cutt.ly/MQIpIBz)
+            to login [click here](https://cutt.ly/kQAIcX1)
             """,inline=False)
             embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
             await ctx.send(
