@@ -1,7 +1,28 @@
 # <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
 
 
-A discord bot made with ❤️ 
+
+# Table Of Contents
+1. [Installation](#installation)
+2. [Database Note](#database-note)
+3. [Database Setup](#database-setup)
+4. [Commands Integrated With Database](#commands-integrated-with-database)
+5. [Command List](#command-list)
+7. [Region List](#region-list)
+8. [Required Packages](#required-packages)
+9. [Screenshots](#screenshots)
+10. [Support Server](#support-server)
+11. [Bot Invite](#bot-invite)
+12. [Screenshots](#screenshots)
+13. [Support Server](#support-server)
+14. [Contributors](#contributors)
+15. [Donation](#donation) 
+
+
+
+
+
+# A discord bot made with ❤️ 
 That can :<br>
 <ul>
     <li>Show current server <b>status</b> of valorant for a given region, whether the servers are <b>UP or DOWN</b> </li>
@@ -24,13 +45,13 @@ make sure to put the necessary keys in `config.json` file [present here](https:/
     "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE"
 }
 ```
-### DATABASE NOTE
+### DATABASE-NOTE
 
 Here for the bot we are using `POSTGRES SQL DATABASE`, if the database URL is not provided `in config.json` the `shop` command will not work.
 If you dont know how to make a postgres database feel free to learn it from youtube or anywhere else. You can also make one postgres SQL DB in heroku
 it is easy to do :)
 
-### DATABASE SETUP
+### DATABASE-SETUP
 
 Your database must contain a table called `riotpwd` and the table should contain following columns with datatypes :
 
@@ -40,13 +61,13 @@ Your database must contain a table called `riotpwd` and the table should contain
 | username                 | character varying                       |
 | password                 | character varying                       |
 
-### COMMANDS INTEGRATED WITH DATABASE
+### COMMANDS-INTEGRATED-WITH-DATABASE
 
 - profile
 - rank
  
 
-## COMMAND LIST
+## COMMAND-LIST
 
 
 |  Command                 | description                             |
@@ -68,7 +89,7 @@ Your database must contain a table called `riotpwd` and the table should contain
 
 
 
-## REGION LIST
+## REGION-LIST
 ```css
 NA      - North America
 EU      - Europe
@@ -78,7 +99,7 @@ KR      - Korea
 LATAM   - Latin America
 ```
 
-## REQUIRED PACKAGES
+## REQUIRED-PACKAGES
  - discord.py
  - valoStatus
  - discord-components
@@ -94,7 +115,7 @@ pip install valoStatus
 ```python
 pip install discord-components
 ```
-## Bot Link
+## Bot-Invite
 here is one ready made bot, which you can add in your server :)
 
 [click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
@@ -108,7 +129,7 @@ here is one ready made bot, which you can add in your server :)
 <img src="assets/profile_screenshot.png" width="425"/>
 
 
-## SUPPORT SERVER
+## SUPPORT-SERVER
 <img src = "https://img.shields.io/discord/556197206147727391.svg?style=for-the-badge">
 
 TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
