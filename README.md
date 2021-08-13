@@ -70,22 +70,23 @@ Your database must contain a table called `riotpwd` and the table should contain
 ## COMMAND-LIST
 
 
-|  Command                 | description                             |
-| ------------------------ | --------------------------------------- |
-| vstat <region_name>      | Shows valorant server of <region_name>  |
-| agent <agent_name>       | Shows description of <agent_name>       |
-| map <map_name>           | Shows description of <map_name>         |
-| weapon <weapon_name>     | Shows description of weapon             |
-| invite                   | Invite the bot to your server           |  
-| ace                      | send ace sounds of different skins      |
-| skin                     | shows info regarding skins              |
-| spec                     | shows specs required for valorant       |
-| shop                     | shows your valorant shop of you account |
-| login                    | Login to you valorant acc to show shop  |
-| bunl                     | show list of all available skin bundles |
-| bundle <name>            | show info of <name> bundle              |
-| rank                     | show rank in valorant                   |
-| Profile                  | show your profile (K/d, rank, win rate) |
+|  Command                 | description                                |
+| ------------------------ | ------------------------------------------ |
+| vstat <region_name>      | Shows valorant server of <region_name>     |
+| agent <agent_name>       | Shows description of <agent_name>          |
+| map <map_name>           | Shows description of <map_name>            |
+| weapon <weapon_name>     | Shows description of weapon                |
+| invite                   | Invite the bot to your server              |  
+| ace                      | send ace sounds of different skins         |
+| skin                     | shows info regarding skins                 |
+| spec                     | shows specs required for valorant          |
+| shop                     | shows your valorant shop of you account    |
+| login                    | Login to you valorant acc to show shop     |
+| bunl                     | show list of all available skin bundles    |
+| bundle <name>            | show info of <name> bundle                 |
+| rank                     | show rank in valorant                      | 
+| profile                  | show your profile (K/d, rank, win rate)    |
+| recent                   | show stats regarding your last compi match |
 
 
 
