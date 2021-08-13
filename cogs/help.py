@@ -32,6 +32,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
             :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
             :small_blue_diamond: `{prefix}profile` - show your profile
+            :small_blue_diamond: `{prefix}recent` - show your recent Competitive match
 
             **BUNDLE**
             :small_blue_diamond: `{prefix}bundle <name>` - show image of bundle with <name>
@@ -316,6 +317,29 @@ class help(commands.Cog):
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
 
+    @help.command()
+    async def recent(self, ctx):
+        recent_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}profile",
+            description=f"full command = `{prefix}recent`"
+        )
+
+        recent_help.add_field(name ="USAGE", value =f"""
+        It will show stats regarding your recent competitive match
+        
+
+        **NOTE**
+        You need to login to your valorant account first
+        before you can use this command.
+        use `{prefix}login` to login to your valorant account
+
+        Also you need to be logged into the tracker.gg
+        [click here](https://cutt.ly/MQIpIBz) to login
+        """, inline=False)
+        recent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        recent_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=recent_help)
 
 
 def setup(client):

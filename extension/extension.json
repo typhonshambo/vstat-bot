@@ -12,6 +12,7 @@
         "cogs.itemshop",
         "cogs.bundles",
         "cogs.rank",
-        "cogs.profile"
+        "cogs.profile",
+        "cogs.recentMatch"
     ]
 }
