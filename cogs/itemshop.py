@@ -117,21 +117,22 @@ class itemshop(commands.Cog):
                 entitlements_token = user_data[1]
                 user_id = user_data[2]
                 skin_data = skins(entitlements_token, access_token, user_id)
-                embed = discord.Embed(title=skin_data["bundle_name"])
+                embed = discord.Embed(title=skin_data["bundle_name"], color=0x00FC7E)
                 embed.set_image(url=skin_data["bundle_image"])
                 await ctx.send(embed=embed)
                 try:
-                    embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}")
+                    embed = discord.Embed(title=f"{skin_data['skin1_name']} costs {skin_data['skin1_price']}", color=0x00FC7E)
                     embed.set_image(url=skin_data["skin1_image"])
                     await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}")
+                    embed = discord.Embed(title=f"{skin_data['skin2_name']} costs {skin_data['skin2_price']}", color=0x00FC7E)
                     embed.set_image(url=skin_data["skin2_image"])
                     await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}")
+                    embed = discord.Embed(title=f"{skin_data['skin3_name']} costs {skin_data['skin3_price']}", color=0x00FC7E)
                     embed.set_image(url=skin_data["skin3_image"])
                     await ctx.send(embed=embed)
-                    embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}")
+                    embed = discord.Embed(title=f"{skin_data['skin4_name']} costs {skin_data['skin4_price']}", color=0x00FC7E)
                     embed.set_image(url=skin_data["skin4_image"])
+                    embed.set_footer(text=(f"Time Remaining : "+ str(skin_data['SingleItemOffersRemainingDurationInSeconds']) + skin_data['time_units']))
                     await ctx.send(embed=embed)
                     
                 

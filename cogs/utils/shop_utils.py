@@ -58,7 +58,6 @@ def skins(entitlements_token, access_token, user_id):
 
     skins_data = r.json()
     single_skins = skins_data["SkinsPanelLayout"]["SingleItemOffers"]
-
     headers = {
         'X-Riot-Entitlements-JWT': entitlements_token,
         'Authorization': f'Bearer {access_token}',
@@ -83,7 +82,7 @@ def skins(entitlements_token, access_token, user_id):
             for skin1 in weapons_list['skins']:
                 if skin in str(skin1):
 
-                    single_skins_images.append(skin1["chromas"][0]["displayIcon"])
+                    single_skins_images.append(skin1["displayIcon"])
                     single_skins_tiers_uuids.append(skin1['contentTierUuid'])
 
 
@@ -139,10 +138,12 @@ def skins(entitlements_token, access_token, user_id):
                     skin_counter += 1
 
     if daily_reset >= 3600:
-        daily_reset_in_hr = round(daily_reset / 3600, 0)
+        daily_reset_in_ = round(daily_reset / 3600, 0) 
+        time_unit = "Hrs"
      
     else:
-        daily_reset_in_minutes = round(daily_reset / 60, 2)
+        daily_reset_in_ = round(daily_reset / 60, 2) 
+        time_unit = "Mins"
         
     skins_list = {
         "bundle_name": bundle_name,
@@ -159,7 +160,8 @@ def skins(entitlements_token, access_token, user_id):
         "skin4_name": skin4_name,
         "skin4_image": skin4_image,
         "skin4_price": skin4_price,
-        "SingleItemOffersRemainingDurationInSeconds": daily_reset,
+        "SingleItemOffersRemainingDurationInSeconds": daily_reset_in_,
+        "time_units":time_unit
     }
 
     return skins_list
