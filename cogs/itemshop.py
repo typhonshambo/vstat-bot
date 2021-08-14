@@ -80,8 +80,7 @@ class itemshop(commands.Cog):
         
 
 
-    REGION="NA"
-
+    
 
 
 
@@ -95,6 +94,7 @@ class itemshop(commands.Cog):
             user = await self.client.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
             username = user['username']
             password = user['password']
+            region = user['region']
         except:
             embed = discord.Embed(
                 color= discord.Color.red()
@@ -105,10 +105,8 @@ class itemshop(commands.Cog):
             """)
             await ctx.send(embed=embed)
         
-        user_in_chat = False
-        found = False
 
-        not_user = await self.client.pg_con.fetch("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
+
         try: 
             if user:
                 await ctx.send("Loading shop...")
@@ -116,7 +114,7 @@ class itemshop(commands.Cog):
                 access_token = user_data[0]
                 entitlements_token = user_data[1]
                 user_id = user_data[2]
-                skin_data = skins(entitlements_token, access_token, user_id)
+                skin_data = skins(entitlements_token, access_token, user_id, region)
                 embed = discord.Embed(title=skin_data["bundle_name"], color=0x00FC7E)
                 embed.set_image(url=skin_data["bundle_image"])
                 await ctx.send(embed=embed)
@@ -144,14 +142,8 @@ class itemshop(commands.Cog):
                 color=discord.Color.red()
             )
             embed.add_field(name ="SOME ERROR OCCURED...",value="""
-            Either your `username` or your `password` is incorrect.
+            Either your `username` \nor your `password` \nor your `region` is incorrect.
             """,inline=False)
-            embed.add_field(name ="also note that", value="""
-```
-The item shop is only available for NA region players.
-We are working on the other regions and it will be available soon
-```
-            """, inline=False)
             embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
             await ctx.send(
                 embed=embed,
