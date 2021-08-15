@@ -28,7 +28,6 @@ class rank(commands.Cog):
                     await ctx.send("Loading rank...")
                     user_data = username_to_data(username, password)
                     user_id = user_data[2]
-                    print(user_id)
                     current_rank = getrank(region,user_id)
 
 

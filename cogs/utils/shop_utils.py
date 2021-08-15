@@ -58,6 +58,7 @@ def skins(entitlements_token, access_token, user_id, region):
 
     skins_data = r.json()
     single_skins = skins_data["SkinsPanelLayout"]["SingleItemOffers"]
+
     headers = {
         'X-Riot-Entitlements-JWT': entitlements_token,
         'Authorization': f'Bearer {access_token}',
@@ -70,20 +71,21 @@ def skins(entitlements_token, access_token, user_id, region):
     content_data = r.json()
 
 
-    all_weapons = requests.get("https://valorant-api.com/v1/weapons")
-    data_weapons = all_weapons.json()
+
 
     single_skins_images = []
     single_skins_tiers_uuids = []
 
 
-    for skin in single_skins:
-        for weapons_list in data_weapons['data']:
-            for skin1 in weapons_list['skins']:
-                if skin in str(skin1):
+ 
 
-                    single_skins_images.append(skin1["displayIcon"])
-                    single_skins_tiers_uuids.append(skin1['contentTierUuid'])
+    for skin in single_skins:
+        
+        r = requests.get(f"https://valorant-api.com/v1/weapons/skinlevels/{skin}")
+        parsed_data = r.json()
+        single_skins_images.append(parsed_data["data"]["displayIcon"])
+        single_skins_tiers_uuids.append(parsed_data["data"]["uuid"])
+
 
 
     headers = {

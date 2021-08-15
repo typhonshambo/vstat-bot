@@ -9,6 +9,17 @@ with open ('././config/config.json', 'r') as f:
 class help(commands.Cog):
     def __init__(self, client):
         self.client = client
+    
+    @commands.Cog.listener()
+    async def on_message(self, message):
+        if message.content.startswith("<@!864451929346539530>"):
+            embed = discord.Embed(
+                color=0xC7FC02
+            )
+            embed.add_field(name=f'My prefix is `{prefix}`', value=f'type `{prefix}h` to learn more')
+            await message.channel.send(embed=embed)
+
+        
 
     @commands.group(aliases=['h'],invoke_without_command=True)
     async def help(self, ctx):
