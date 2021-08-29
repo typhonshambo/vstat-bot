@@ -3,7 +3,11 @@ from discord.ext import commands
 import DiscordUtils 
 from valoStatus import Region
 from discord.ext.commands import MissingRequiredArgument
+import json
 
+with open ('././config/config.json', 'r') as f:
+    config = json.load(f)
+    prefix = config['prefix']
 
 class Valostatus(commands.Cog):
     def __init__(self, client):
@@ -48,7 +52,7 @@ class Valostatus(commands.Cog):
                 description='',
                 color=discord.Color.red()
             )
-            embed.add_field(name ="❌You need to give REGION",value="`$status <region>`",inline=False)
+            embed.add_field(name ="❌You need to give REGION",value=f"`{prefix}status <region>`",inline=False)
             embed.add_field(name ="REGION LIST",value="""
             NA - North America
             EU - Europe

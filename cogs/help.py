@@ -28,7 +28,7 @@ class help(commands.Cog):
             title="COMMAND LIST",
             description=f"""
             **GENERAL**
-            :small_blue_diamond: `{prefix}vstat <region>` - shows server status of a region
+            :small_blue_diamond: `{prefix}status <region>` - shows server status of a region
             :small_blue_diamond: `{prefix}agent <name>` - shows info regarding agents
             :small_blue_diamond: `{prefix}map <name>` - shows info regarding valorant maps
             :small_blue_diamond: `{prefix}invite` - Get the bot invite link
