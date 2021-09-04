@@ -50,7 +50,7 @@ class recentMatch(commands.Cog):
                     match_id = match_data
 
                     mch_data , plr_data = await match_stats(match_id)
-
+                    
 
                     match_map = mch_data['match_info']['map_name']
                     map_image_url =  mch_data['match_info']['map_image_url']
@@ -63,10 +63,15 @@ class recentMatch(commands.Cog):
                         plyr_agent_img = plr_data[f'{full_name}']['agent_image_url']
                         plyr_team_name = plr_data[f'{full_name}']['team']
 
-                    
+                    red_team_result = mch_data[f'Red']['won']
+                    blue_team_result = mch_data[f'Blue']['won']
                     match_result = mch_data[f'{plyr_team_name}']['won']
-
-                    if match_result == True:
+                    
+                    if red_team_result == False and blue_team_result == False:
+                        match_fnl_result = "Draw"
+                        avatr_img = "https://raw.githubusercontent.com/picklejason/ValorantRankedPointsBot/main/Resources/stable.png"
+                    
+                    elif match_result == True:
                         match_fnl_result = "VICTORY"
                         avatr_img = "https://i.imgur.com/X6yADlO.png"
                     elif match_result == False:
