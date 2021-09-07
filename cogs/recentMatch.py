@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord_components import *
 import json
-from .utils.recentMatch_utils import * 
+from .utils.recentMatch_utils import username_to_data, getingamename, GetMatchData, matchStat
 from .utils import match_resource as res 
 from datetime import datetime
 
@@ -15,11 +15,14 @@ class recentMatch(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+            
+
 
     @commands.command()
     async def recent(self, ctx):
         author_id = str(ctx.author.id)
         
+
         try:
             user = await self.bot.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
             username = user['username']
@@ -35,7 +38,7 @@ class recentMatch(commands.Cog):
                 user_name = ingamename['data']['name']
                 tagline = ingamename['data']['tag']
 
-                match_data = await GetMatchData(user_name,tagline)
+                match_data = await GetMatchData(region,user_id)
 
                 if match_data == None:
                     embed = discord.Embed(
@@ -48,35 +51,38 @@ class recentMatch(commands.Cog):
 
                 else:
                     match_id = match_data
-
-                    mch_data , plr_data = await match_stats(match_id)
+                    
+                    mch_data , plr_data = matchStat(match_id)
                     
 
                     match_map = mch_data['match_info']['map_name']
-                    map_image_url =  mch_data['match_info']['map_image_url']
-
-
+                    match_date = mch_data["match_info"]["start"]
+                    
                     plyr_list = plr_data.keys()
 
-                    full_name = f'{user_name}'+'#'+f'{tagline}'
+                    full_name = f'{user_name}'+f'{tagline}'
                     if full_name in list(plyr_list):
                         plyr_agent_img = plr_data[f'{full_name}']['agent_image_url']
                         plyr_team_name = plr_data[f'{full_name}']['team']
+                        print(plyr_team_name)
+                        match_result = mch_data[f'{plyr_team_name}']['won']
 
-                    red_team_result = mch_data[f'Red']['won']
-                    blue_team_result = mch_data[f'Blue']['won']
-                    match_result = mch_data[f'{plyr_team_name}']['won']
+
+                        red_team_result = mch_data[f'Red']['won']
+                        blue_team_result = mch_data[f'Blue']['won']
+                        
                     
-                    if red_team_result == False and blue_team_result == False:
-                        match_fnl_result = "Draw"
-                        avatr_img = "https://raw.githubusercontent.com/picklejason/ValorantRankedPointsBot/main/Resources/stable.png"
-                    
-                    elif match_result == True:
-                        match_fnl_result = "VICTORY"
-                        avatr_img = "https://i.imgur.com/X6yADlO.png"
-                    elif match_result == False:
-                        match_fnl_result = "DEFEAT"
-                        avatr_img = "https://i.imgur.com/KOiVrrZ.png"
+
+                        if red_team_result == False and blue_team_result == False:
+                            match_fnl_result = "Draw"
+                            avatr_img = "https://raw.githubusercontent.com/picklejason/ValorantRankedPointsBot/main/Resources/stable.png"
+                        
+                        elif match_result == True:
+                            match_fnl_result = "VICTORY"
+                            avatr_img = "https://i.imgur.com/X6yADlO.png"
+                        elif match_result == False:
+                            match_fnl_result = "DEFEAT"
+                            avatr_img = "https://i.imgur.com/KOiVrrZ.png"
 
                     sorted_players = sorted(plr_data, key=lambda x: int(plr_data[x]["score"]), reverse=True)
                     team1 = "**Team 1**\n"
@@ -93,26 +99,19 @@ class recentMatch(commands.Cog):
 
                     embed = discord.Embed(
                         color = 0x00FFFF,
-                  
+                    
                         description = team1+'\n'+team2,
                     )
                     # embed.set_image(url=f"{map_image_url}")
                     embed.set_author(name=match_map +' | '+match_fnl_result,icon_url=avatr_img)
+                    embed.set_footer(text=f"🟢 {match_date} UTC")
                     embed.set_thumbnail(url=f"{plyr_agent_img}")
                     
 
-                    embed2 = discord.Embed(
-                        color = 0x00FFFF,
-                        timestamp=datetime.utcnow()
-                    )
-                    embed2.set_image(url=f"{map_image_url}")
-                    footer = (
-                        "🟢 Powered by Tracker.gg"
-                    )
-                    embed2.set_footer(text=footer)
+
 
                     await ctx.send(embed=embed)
-                    await ctx.send(embed=embed2)
+        
 
                 
             
