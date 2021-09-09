@@ -1144,7 +1144,7 @@ class skin(commands.Cog):
                         Select(placeholder='Selection',
                         options=[
                         SelectOption(label="Glitchpop Judge",value="Glitchpop Judge"),
-                        SelectOption(label="Enderflame Judge",value="Elderflame Judge"),
+                        SelectOption(label="Elderflame Judge",value="Elderflame Judge"),
                         SelectOption(label="Rush Judge",value="Rush Judge"),
                         SelectOption(label="dot EXE Judge",value="dot EXE Judge"),
                         SelectOption(label="Outpost Judge",value="Outpost Judge"),
@@ -1173,7 +1173,7 @@ class skin(commands.Cog):
                 
                 if _res.component[0].value=="Elderflame Judge":
                     embed = discord.Embed(
-                        title="Enderflame Judge",
+                        title="Elderflame Judge",
                         color = discord.Color.green()
                     )
                     embed.add_field(name ="Availability",value="Price: 2,475 [VP]")
@@ -1617,7 +1617,7 @@ class skin(commands.Cog):
                         SelectOption(label="Aristocrat Vandal",value="Aristocrat Vandal"),
                         SelectOption(label="Origin Vandal",value="Origin Vandal"),
                         SelectOption(label="Glitchpop Vandal",value="Glitchpop Vandal"),
-                        SelectOption(label="Enderflame Vandal",value="Enderflame Vandal"),
+                        SelectOption(label="Elderflame Vandal",value="Elderflame Vandal"),
                         SelectOption(label="Hivemind Vandal",value="Hivemind Vandal"),
                         SelectOption(label="Forsaken Vandal",value="Forsaken Vandal"),
                         SelectOption(label="Ruin Vandal",value="Ruin Vandal"),
@@ -1673,9 +1673,9 @@ class skin(commands.Cog):
                 
         
           
-                if _res.component[0].value=="Enderflame Vandal":
+                if _res.component[0].value=="Elderflame Vandal":
                     embed = discord.Embed(
-                        title="Enderflame Vandal",
+                        title="Elderflame Vandal",
                         color = discord.Color.green()
                     )
                     embed.add_field(name ="Availability",value="Price: 2,475 [VP]")

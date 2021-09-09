@@ -13,6 +13,7 @@
         "cogs.bundles",
         "cogs.rank",
         "cogs.profile",
-        "cogs.recentMatch"
+        "cogs.recentMatch",
+        "cogs.botProfiler"
     ]
 }

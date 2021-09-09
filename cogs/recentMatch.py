@@ -64,7 +64,7 @@ class recentMatch(commands.Cog):
                     if full_name in list(plyr_list):
                         plyr_agent_img = plr_data[f'{full_name}']['agent_image_url']
                         plyr_team_name = plr_data[f'{full_name}']['team']
-                        print(plyr_team_name)
+                        
                         match_result = mch_data[f'{plyr_team_name}']['won']
 
 
