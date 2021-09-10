@@ -138,6 +138,7 @@ TYPHON GAMERS [click here](https://discord.gg/m5mSyTV7RR)
 
 ## Contributors
 <iframe src="https://discord.com/widget?id=556197206147727391&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=typhonshambo/Valorant-server-stat-bot)
 
 ## Donation
