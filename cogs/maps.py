@@ -23,6 +23,7 @@ class map(commands.Cog):
         :white_small_square: Ascent 
         :white_small_square: Icebox
         :white_small_square: Breeze
+        :white_small_square: Fracture
         """,inline=False)
         map_list.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         map_list.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif") 
@@ -108,6 +109,19 @@ class map(commands.Cog):
         """)
         breeze_des.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
         breeze_des.set_image(url="https://cdn.discordapp.com/attachments/864780326357827585/865320255479873536/ea82cc2d-valorant-breeze-map-article-version.png")
+        await ctx.send(embed=breeze_des)
+
+    @map.command(aliases=['Fracture'])
+    async def fracture(self, ctx):
+        breeze_des = discord.Embed(
+            color=0x0AFF81
+        )
+        breeze_des.add_field(name ="Fracture", value ="""
+        Fracture is a top-secret experiment site split apart by a radianite-fueled disaster. Flip the script on attackers with aggressive defender positioning on a new dual-biome map. In its simplest form, the map is marked by its H-shape layout with a visual split down the middle that reveals contrasting sides.
+        \n[source](https://mobalytics.gg/blog/valorant-maps-overview/)
+        """)
+        breeze_des.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
+        breeze_des.set_image(url="https://cdnportal.mobalytics.gg/production/2021/09/7fdd8774-fracture-mobalytics-map.png")
         await ctx.send(embed=breeze_des)
 
 def setup(client):
