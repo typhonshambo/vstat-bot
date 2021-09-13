@@ -88,7 +88,7 @@ def matchStat(match_id):
 
     red_team = data["data"]["teams"]["red"]
     blue_team =  data["data"]["teams"]["blue"]
-    players = data["data"]["players"]["all_players"][0:9]
+    players = data["data"]["players"]["all_players"][0:10]
     i = 0 
 
     MATCH_DATA["match_info"] = {}
