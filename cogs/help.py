@@ -36,7 +36,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}ace` - Get ace sounds of bundles
             :small_blue_diamond: `{prefix}skin` - shows info regarding skins
             :small_blue_diamond: `{prefix}spec` - shows PC requirements of Valorant
-
+            :small_blue_diamond: `{prefix}leaderboard <region> <amount>` -  shows leaderboard 
 
             **PLAYER STAT**
             :small_blue_diamond: `{prefix}login` - login to you valorant account
@@ -351,6 +351,37 @@ class help(commands.Cog):
         recent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         recent_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=recent_help)
+
+
+    @help.command(aliases=['lb'])
+    async def leaderboard(self, ctx):
+        leaderboard_help = discord.Embed(
+            color=0x0AFF4D,
+            title=f"{prefix}leaderboard",
+            description=f"full command = `{prefix}leaderboard <region> <amount>`"
+        )
+        leaderboard_help.add_field(name ="ALIASES", value=f"""
+        :white_small_square: `{prefix}lb <region> <amount>`
+        """, inline=False)
+        leaderboard_help.add_field(name ="USAGE", value =f"""
+        It will show leaderboard for a given region
+        """, inline=False)
+        leaderboard_help.add_field(name ="REGIONS AVAILABLE", value = """
+        :white_small_square: `na` - North America
+        :white_small_square: `eu` - Europe
+        :white_small_square: `br` - Brazil
+        :white_small_square: `ap` - Asia Pacific
+        :white_small_square: `kr` - Korea
+        :white_small_square: `latam` - Latin America
+        """)
+        leaderboard_help.add_field(name = "NOTE!",value="""
+        Make sure that the region you provided is in lower case.
+        It's not `AP` it's `ap`
+        """)
+        leaderboard_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)", inline=False)  
+        leaderboard_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=leaderboard_help)
+
 
 
 def setup(client):
