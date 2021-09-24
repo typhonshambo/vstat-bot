@@ -332,7 +332,7 @@ class help(commands.Cog):
     async def recent(self, ctx):
         recent_help = discord.Embed(
             color=0x0AFF4D,
-            title=f"{prefix}profile",
+            title=f"{prefix}recent",
             description=f"full command = `{prefix}recent`"
         )
 
