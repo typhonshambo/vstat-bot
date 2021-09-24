@@ -52,7 +52,7 @@ class help(commands.Cog):
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
         help_embed.add_field(name = "MORE", value =f"For more details regarding a specific command use `{prefix}help <command>`")
-        help_embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
+        help_embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
         await ctx.send(embed=help_embed)
 
 
@@ -68,7 +68,7 @@ class help(commands.Cog):
         It will show conditions of valorant server of given <region>
         To get the region list use command `{prefix}reglist`
         """, inline=False)
-        vstat_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        vstat_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         vstat_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=vstat_help)
 
@@ -88,7 +88,7 @@ class help(commands.Cog):
         It will show details regarding a given Valorant Agent.
         To get the list of agent names use `{prefix}agent`
         """, inline=False)
-        agent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        agent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         agent_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=agent_help)
 
@@ -108,7 +108,7 @@ class help(commands.Cog):
         It will show details regarding a given Valorant Map.
         To get the list of map names use `{prefix}map`
         """, inline=False)
-        map_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        map_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         map_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=map_help)
 
@@ -129,7 +129,7 @@ class help(commands.Cog):
         invite_help.add_field(name ="USAGE", value =f"""
         It will send you the bot invite link
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -147,7 +147,7 @@ class help(commands.Cog):
         It will show details regarding a weapon
         to get list of weapon use `{prefix}wplist`
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -165,7 +165,7 @@ class help(commands.Cog):
         invite_help.add_field(name ="USAGE", value =f"""
         It will send the ace sound of some popular collections
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -185,7 +185,7 @@ class help(commands.Cog):
         that you would like to see.
         To see list of guns use `{prefix}gunl`
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
     
@@ -203,7 +203,7 @@ class help(commands.Cog):
         invite_help.add_field(name ="USAGE", value =f"""
         It will show PC requirements for Valorant
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -224,7 +224,7 @@ class help(commands.Cog):
         do not have access to you valorant credentials
         they are all ENCRYPTED, so no need to worry :)
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -244,7 +244,7 @@ class help(commands.Cog):
         before you can use this command.
         use `{prefix}login` to login to your valorant account
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
@@ -262,7 +262,7 @@ class help(commands.Cog):
         bundle_help.add_field(name ="USAGE", value =f"""
         It will show items list of available bundles in valorant 
         """, inline=False)
-        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
     
@@ -280,7 +280,7 @@ class help(commands.Cog):
 
         To get the list of bundles use `{prefix}bunl`
         """, inline=False)
-        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
 
@@ -300,7 +300,7 @@ class help(commands.Cog):
         before you can use this command.
         use `{prefix}login` to login to your valorant account
         """, inline=False)
-        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
 
@@ -324,7 +324,7 @@ class help(commands.Cog):
         Also you need to be logged into the tracker.gg
         [click here](https://cutt.ly/MQIpIBz) to login
         """, inline=False)
-        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=bundle_help)
 
@@ -348,7 +348,7 @@ class help(commands.Cog):
         Also you need to be logged into the tracker.gg
         [click here](https://cutt.ly/MQIpIBz) to login
         """, inline=False)
-        recent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        recent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         recent_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=recent_help)
 
@@ -378,7 +378,7 @@ class help(commands.Cog):
         Make sure that the region you provided is in lower case.
         It's not `AP` it's `ap`
         """)
-        leaderboard_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)", inline=False)  
+        leaderboard_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)", inline=False)  
         leaderboard_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=leaderboard_help)
 

@@ -25,7 +25,7 @@ class map(commands.Cog):
         :white_small_square: Breeze
         :white_small_square: Fracture
         """,inline=False)
-        map_list.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        map_list.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         map_list.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif") 
         await ctx.send(embed=map_list)
 

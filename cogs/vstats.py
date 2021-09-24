@@ -61,7 +61,7 @@ class Valostatus(commands.Cog):
             KR - Korea
             LATAM - Latin America
             """,inline=False)
-            embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
+            embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
 
             embed.set_thumbnail(url="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png")
             
@@ -81,7 +81,7 @@ class Valostatus(commands.Cog):
         KR - Korea
         LATAM - Latin America
         """,inline=False)
-        embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/tygamers) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
+        embed.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")
 
         embed.set_thumbnail(url="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png")
         await ctx.send(embed=embed)
