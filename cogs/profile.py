@@ -21,17 +21,14 @@ class profile(commands.Cog):
         author_id = str(ctx.author.id)
         try:
             
-            user = await self.client.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
-            username = user['username']
-            password = user['password']
-            region   = user['region']
+            user = await self.client.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
+            puuid = user['puuid']
+            region = user['region']
 
             try:
                 if user:
                     await ctx.send("Loading profile...")
-                    user_data = username_to_data(username, password)
-                    user_id = user_data[2]
-                    raw_ingame_user = getingamename(region, user_id)
+                    raw_ingame_user = getingamename(region, puuid)
 
                     ingame_username = raw_ingame_user['data']['name']
                     ingame_tag = raw_ingame_user['data']['tag']

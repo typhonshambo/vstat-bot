@@ -15,68 +15,68 @@ class itemshop(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.Cog.listener()
-    async def on_message(self, message):
+    # @commands.Cog.listener()
+    # async def on_message(self, message):
 
-        author_id = str(message.author.id)
-        user = await self.client.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
+    #     author_id = str(message.author.id)
+    #     user = await self.client.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
             
-        if message.author != message.author.bot:
-            if not message.guild:
-                if message.content.startswith('username='):
-                    username = message.content.split('=')
+    #     if message.author != message.author.bot:
+    #         if not message.guild:
+    #             if message.content.startswith('username='):
+    #                 username = message.content.split('=')
                     
-                    if not user:
-                        await self.client.pg_con.execute("INSERT INTO riotpwd (user_id, username) VALUES ($1, $2)", author_id, username[1])
-                        await message.channel.send("Successfully updated your username")
-                    if user:
-                        await self.client.pg_con.execute("UPDATE riotpwd SET username = $1 WHERE user_id = $2",username[1], author_id)
-                        await message.channel.send("Successfully updated your username")
-                if message.content.startswith('password='):
-                    password = message.content.split('=')
+    #                 if not user:
+    #                     await self.client.pg_con.execute("INSERT INTO riotpwd (user_id, username) VALUES ($1, $2)", author_id, username[1])
+    #                     await message.channel.send("Successfully updated your username")
+    #                 if user:
+    #                     await self.client.pg_con.execute("UPDATE riotpwd SET username = $1 WHERE user_id = $2",username[1], author_id)
+    #                     await message.channel.send("Successfully updated your username")
+    #             if message.content.startswith('password='):
+    #                 password = message.content.split('=')
                     
-                    await self.client.pg_con.execute("UPDATE riotpwd SET password = $1 WHERE user_id = $2",password[1], author_id)
-                    await message.channel.send("Successfully updated your password")
+    #                 await self.client.pg_con.execute("UPDATE riotpwd SET password = $1 WHERE user_id = $2",password[1], author_id)
+    #                 await message.channel.send("Successfully updated your password")
                 
-                if message.content.startswith('region='):
-                    region = message.content.split('=')
+    #             if message.content.startswith('region='):
+    #                 region = message.content.split('=')
                     
-                    await self.client.pg_con.execute("UPDATE riotpwd SET region = $1 WHERE user_id = $2",region[1], author_id)
-                    await message.channel.send("Successfully updated your region")
+    #                 await self.client.pg_con.execute("UPDATE riotpwd SET region = $1 WHERE user_id = $2",region[1], author_id)
+    #                 await message.channel.send("Successfully updated your region")
                 
-                if message.content.startswith('!reglist'):
-                    embed = discord.Embed(
-                        color= discord.Color.blue()
-                    )
-                    embed.add_field(name ="REGION LIST",value="""
-                        `na` - North America
-                        `eu` - Europe
-                        `br` - Brazil
-                        `ap` - Asia Pacific
-                        `kr` - Korea
-                        `latam` - Latin America
-                    """,inline=False)
-                    await message.channel.send(embed=embed)
+    #             if message.content.startswith('!reglist'):
+    #                 embed = discord.Embed(
+    #                     color= discord.Color.blue()
+    #                 )
+    #                 embed.add_field(name ="REGION LIST",value="""
+    #                     `na` - North America
+    #                     `eu` - Europe
+    #                     `br` - Brazil
+    #                     `ap` - Asia Pacific
+    #                     `kr` - Korea
+    #                     `latam` - Latin America
+    #                 """,inline=False)
+    #                 await message.channel.send(embed=embed)
                 
     
-    @commands.command()
-    async def login(self, ctx):
-        embed = discord.Embed(
-            color = discord.Color.blue(),
-            description = "Check you DM"
-        )
-        await ctx.send(embed=embed)
+    # @commands.command()
+    # async def login(self, ctx):
+    #     embed = discord.Embed(
+    #         color = discord.Color.blue(),
+    #         description = "Check you DM"
+    #     )
+    #     await ctx.send(embed=embed)
 
-        dm_embed = discord.Embed(
-            color=0xA6FF0A,
-            title="LOGIN PAGE"
-        )
-        dm_embed.add_field(name ="**username**",value="Enter you valorant username\nfor example \n`username=typhonshambo` if you username is typhonshambo",inline=False)
-        dm_embed.add_field(name ="**password**",value="Enter you valorant password\nfor example \n`password=123` if you username is 123",inline=False)
-        dm_embed.add_field(name ="**region**",value="Enter you valorant region\nfor example \n`region=ap` if you region is ap\n to get region list use `!reglist` here",inline=False)
-        dm_embed.add_field(name="NOTE",value ="You need to enter you `username` **first** if you are new here!!\nAnd if you write the username or password incorrect \ntype again the same thing to change it")
+    #     dm_embed = discord.Embed(
+    #         color=0xA6FF0A,
+    #         title="LOGIN PAGE"
+    #     )
+    #     dm_embed.add_field(name ="**username**",value="Enter you valorant username\nfor example \n`username=typhonshambo` if you username is typhonshambo",inline=False)
+    #     dm_embed.add_field(name ="**password**",value="Enter you valorant password\nfor example \n`password=123` if you username is 123",inline=False)
+    #     dm_embed.add_field(name ="**region**",value="Enter you valorant region\nfor example \n`region=ap` if you region is ap\n to get region list use `!reglist` here",inline=False)
+    #     dm_embed.add_field(name="NOTE",value ="You need to enter you `username` **first** if you are new here!!\nAnd if you write the username or password incorrect \ntype again the same thing to change it")
 
-        await ctx.author.send(embed=dm_embed)
+    #     await ctx.author.send(embed=dm_embed)
         
 
 
@@ -132,7 +132,8 @@ class itemshop(commands.Cog):
                     embed.set_image(url=skin_data["skin4_image"])
                     embed.set_footer(text=(f"Time Remaining : "+ str(skin_data['SingleItemOffersRemainingDurationInSeconds']) + skin_data['time_units']))
                     await ctx.send(embed=embed)
-                    
+                    embed = discord.Embed(title="⚠️IMPORTANT⚠️", description="Due to legal reports we may actually remove this command in future join our support server for more details\n Also a big thanks for giving our bot so much of support :smiling_face_with_tear: i love you all  \n [support server](https://discord.gg/m5mSyTV7RR)")
+                    await ctx.send(embed=embed)
                 
                 except:
                     await ctx.send("Loading complete!")

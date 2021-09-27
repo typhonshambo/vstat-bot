@@ -39,7 +39,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}leaderboard <region> <amount>` -  shows leaderboard 
 
             **PLAYER STAT**
-            :small_blue_diamond: `{prefix}login` - login to you valorant account
+            :small_blue_diamond: `{prefix}link <name> <tagline>` - link to you valorant account
             :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
             :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
             :small_blue_diamond: `{prefix}profile` - show your profile
@@ -208,21 +208,26 @@ class help(commands.Cog):
         await ctx.send(embed=invite_help)
 
     @help.command()
-    async def login(self, ctx):
+    async def link(self, ctx):
         invite_help = discord.Embed(
             color=0x0AFF4D,
-            title=f"{prefix}login",
-            description=f"full command = `{prefix}login`"
+            title=f"{prefix}link",
+            description=f"full command = `{prefix}link <name>#<tagline>`"
         )
-
+        invite_help.add_field(name ="EXAMPLE", value =f"""
+        so if your username is `TYshambo#0001` use command 
+        `{prefix}link TYshambo#0001`
+        make sure you do use `#` in the command
+        """, inline=False)
         invite_help.add_field(name ="USAGE", value =f"""
-        It will login into your valorant account,
-        so that you can access shop using `{prefix}shop` in discord
+        It will link the bot with your valorant account,
+        so that you can access commands like 
+        - `{prefix} recent`
+        - `{prefix} rank`
 
         **NOTE**
-        The developers and the staff of this bot 
-        do not have access to you valorant credentials
-        they are all ENCRYPTED, so no need to worry :)
+        You need to link your profile with tracker.gg to use command  `{prefix}profile`
+        [click here](https://cutt.ly/MQIpIBz) to link your profile with tracker.gg
         """, inline=False)
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
@@ -240,9 +245,8 @@ class help(commands.Cog):
         It will show items available in your shop ingame
 
         **NOTE**
-        You need to login to your valorant account first
-        before you can use this command.
-        use `{prefix}login` to login to your valorant account
+        Due to report, we may remove this command soon!",
+        Join our support server to know more about it.
         """, inline=False)
         invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
@@ -296,9 +300,9 @@ class help(commands.Cog):
         It will show your rank and some other stats
 
         **NOTE**
-        You need to login to your valorant account first
+        You need to link your valorant account first
         before you can use this command.
-        use `{prefix}login` to login to your valorant account
+        use `{prefix}h link` to know more
         """, inline=False)
         bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
@@ -317,12 +321,8 @@ class help(commands.Cog):
         like - your K/D, Win Rate, Number of Hours you played etc.
 
         **NOTE**
-        You need to login to your valorant account first
-        before you can use this command.
-        use `{prefix}login` to login to your valorant account
-
-        Also you need to be logged into the tracker.gg
-        [click here](https://cutt.ly/MQIpIBz) to login
+        You need to connect your account with tracker.gg
+        [click here](https://cutt.ly/MQIpIBz) to login!
         """, inline=False)
         bundle_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         bundle_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
@@ -341,12 +341,9 @@ class help(commands.Cog):
         
 
         **NOTE**
-        You need to login to your valorant account first
+        You need to link your valorant account first
         before you can use this command.
-        use `{prefix}login` to login to your valorant account
-
-        Also you need to be logged into the tracker.gg
-        [click here](https://cutt.ly/MQIpIBz) to login
+        use `{prefix}h link` to know more
         """, inline=False)
         recent_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
         recent_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   

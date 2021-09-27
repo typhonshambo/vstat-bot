@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import requests
 import json 
-from .utils.rank_utils import username_to_data,getrank
+from .utils.rank_utils import getrank
 from discord_components import *
 
 with open ('././config/config.json', 'r') as f:
@@ -18,17 +18,14 @@ class rank(commands.Cog):
         author_id = str(ctx.author.id)
         
         try:
-            user = await self.client.pg_con.fetchrow("SELECT * FROM riotpwd WHERE user_id = $1", author_id)
-            username = user['username']
-            password = user['password']
-            region   = user['region']
+            user = await self.client.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
+            puuid = user['puuid']
+            region = user['region']
 
             try: 
                 if user:
                     await ctx.send("Loading rank...")
-                    user_data = username_to_data(username, password)
-                    user_id = user_data[2]
-                    current_rank = getrank(region,user_id)
+                    current_rank = getrank(region,puuid)
 
 
                     player_rank = current_rank['data']['current_data']['currenttierpatched']
@@ -54,7 +51,8 @@ class rank(commands.Cog):
                     color=discord.Color.red()
                 )
                 embed.add_field(name ="SOME ERROR OCCURED...",value="""
-                Either your `username` \nor your `password` \nor your `region` is incorrect.
+                Please join our support server to report this error!
+                just click on the button given below to continue.
                 """,inline=False)
         
                 embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -73,8 +71,8 @@ class rank(commands.Cog):
                 color= discord.Color.red()
             )
             embed.add_field(name ="HOLD ON MAN !",value = f"""
-            you need to login to your account before you can use this command,
-            use `{prefix}login` to login to your account
+            you need to link your account before you can use this command,
+            use `{prefix}h link` to know more!
             """)
             await ctx.send(embed=embed)
 def setup(client):

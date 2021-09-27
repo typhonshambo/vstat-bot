@@ -15,6 +15,7 @@
         "cogs.profile",
         "cogs.recentMatch",
         "cogs.botProfiler",
-        "cogs.leaderboard"
+        "cogs.leaderboard",
+        "cogs.accLink"
     ]
 }
