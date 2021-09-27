@@ -53,7 +53,7 @@ it is easy to do :)
 
 ### DATABASE-SETUP
 
-Your database must contain a table called `riotpwd` and the table should contain following columns with datatypes :
+Your database must contain a table called `acclink` and the table should contain following columns with datatypes :
 
 |  column name             | datatype                                |
 | ------------------------ | --------------------------------------- |
