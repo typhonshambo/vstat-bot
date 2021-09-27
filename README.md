@@ -57,9 +57,11 @@ Your database must contain a table called `riotpwd` and the table should contain
 
 |  column name             | datatype                                |
 | ------------------------ | --------------------------------------- |
-| user_id                  | character varying                       |
-| username                 | character varying                       |
-| password                 | character varying                       |
+| userid                   | character varying                       |
+| name                     | character varying                       |
+| tagline                  | character varying                       |
+| puuid                    | character varying                       |
+| region                   | character varying                       |
 
 ### COMMANDS-INTEGRATED-WITH-DATABASE
 
