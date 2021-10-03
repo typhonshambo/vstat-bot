@@ -1,16 +1,15 @@
-from re import split
 import discord
 from discord.ext import commands
 from discord_components import *
 from .utils.acclink_utils import accountData
-from discord.ext.commands.errors import MissingRequiredArgument
+from discord.ext.commands import MissingRequiredArgument
 import json
 
 with open ('././config/config.json', 'r') as f:
-    config = json.load(f)
-    prefix = config['prefix']
+	config = json.load(f)
+	prefix = config['prefix']
 
-class aceSound(commands.Cog):
+class acclink(commands.Cog):
 	def __init__(self, client):
 		self.client = client
 
@@ -22,13 +21,14 @@ class aceSound(commands.Cog):
 
 			username = name.split('#')
 			if not user:
+				msg = await ctx.reply("linking...")
 				puuid , region = accountData(username[0], username[1])
 				await self.client.pg_con.execute("INSERT INTO acclink (userid, name, tagline, puuid, region) VALUES ($1, $2, $3, $4, $5)", author_id, username[0], username[1], str(puuid), str(region))
 				embed = discord.Embed(
 					color = discord.Color.green(),
 					description="Successfully linked"
 				)
-				await ctx.reply(embed=embed)
+				await msg.edit(content="done!", embed=embed)
 
 			if user:
 				puuid , region = accountData(username[0], username[1])
@@ -74,6 +74,47 @@ class aceSound(commands.Cog):
 
 
 			
+	@commands.command()
+	async def unlink(self, ctx):
+		author_id = str(ctx.author.id)
+		user = await self.client.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
+		try: 
+			if not user:
+				embed = discord.Embed(
+					color = discord.Colour.random(),
+					description = f"""
+					You have not linked your account yet. 
+					please link your account first to unlink it.
+					user `{prefix}h link` to know more 
+					"""
+				)
+				await ctx.send(embed=embed)
+
+			if user:
+				await self.client.pg_con.fetchval(
+					"DELETE FROM acclink WHERE userid = $1", 
+					author_id
+				)
+				embed = discord.Embed(
+						color = discord.Color.green(),
+						description="Successfully unlinked"
+				)
+				await ctx.reply(embed=embed)
+		except:
+			embed = discord.Embed(
+				color = discord.Color.red(),
+				description="Some error occured"
+			)
+			await ctx.send(
+				embed=embed,
+				components=[
+					[
+						Button(label="Support Server", style=5, url="https://discord.gg/m5mSyTV7RR"),
+						Button(label="Vote", style=5, url="https://top.gg/bot/864451929346539530/vote")
+					]
+				]
+			)
+
 def setup(client):
-	client.add_cog(aceSound(client))
+	client.add_cog(acclink(client))
 	print("link         | Imported")   

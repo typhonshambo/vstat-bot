@@ -40,7 +40,7 @@ class help(commands.Cog):
 
             **PLAYER STAT**
             :small_blue_diamond: `{prefix}link <name> <tagline>` - link to you valorant account
-            :small_blue_diamond: `{prefix}shop` - shows items available in you shop in game
+            :small_blue_diamond: `{prefix}unlink` - unlink to you valorant account
             :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
             :small_blue_diamond: `{prefix}profile` - show your profile
             :small_blue_diamond: `{prefix}recent` - show your recent Competitive match
@@ -233,24 +233,46 @@ class help(commands.Cog):
         invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
         await ctx.send(embed=invite_help)
 
+
     @help.command()
-    async def shop(self, ctx):
-        invite_help = discord.Embed(
+    async def unlink(self, ctx):
+        unlink_help = discord.Embed(
             color=0x0AFF4D,
-            title=f"{prefix}shop",
-            description=f"full command = `{prefix}shop`"
+            title=f"{prefix}unlink",
+            description=f"full command = `{prefix}unlink`"
         )
 
-        invite_help.add_field(name ="USAGE", value =f"""
-        It will show items available in your shop ingame
+        unlink_help.add_field(name ="USAGE", value =f"""
+        It will unlink your valorant account without your discord account
+        
 
         **NOTE**
-        Due to report, we may remove this command soon!",
-        Join our support server to know more about it.
+        You need to link your valorant account first
+        before you can use this command.
+        use `{prefix}h link` to know more
         """, inline=False)
-        invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
-        invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
-        await ctx.send(embed=invite_help)
+        unlink_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+        unlink_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+        await ctx.send(embed=unlink_help)
+
+    # @help.command()
+    # async def shop(self, ctx):
+    #     invite_help = discord.Embed(
+    #         color=0x0AFF4D,
+    #         title=f"{prefix}shop",
+    #         description=f"full command = `{prefix}shop`"
+    #     )
+
+    #     invite_help.add_field(name ="USAGE", value =f"""
+    #     It will show items available in your shop ingame
+
+    #     **NOTE**
+    #     Due to report, we may remove this command soon!",
+    #     Join our support server to know more about it.
+    #     """, inline=False)
+    #     invite_help.add_field(name = "Join support server!", value="[support server](https://discord.com/invite/m5mSyTV7RR) | [github](https://github.com/typhonshambo/Valorant-server-stat-bot)")  
+    #     invite_help.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")   
+    #     await ctx.send(embed=invite_help)
 
     @help.command(aliases=['bunl'])
     async def bundlelist(self, ctx):
