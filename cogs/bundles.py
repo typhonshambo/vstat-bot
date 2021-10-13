@@ -28,7 +28,7 @@ class bundles(commands.Cog):
 
 
     @commands.command()
-    async def bundle(self, ctx, name:str):
+    async def bundle(self, ctx, * ,name:str):
 
 
         r = bundle_list_img("https://valorant-api.com/v1/bundles")
