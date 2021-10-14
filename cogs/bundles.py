@@ -5,6 +5,7 @@ from .utils.bundles_utils import bundle_list , bundle_list_img, bundle_get_image
 import json
 from discord_components import *
 from discord.ext.commands.errors import MissingRequiredArgument
+import difflib
 
 with open ('././config/config.json', 'r') as f:
     config = json.load(f)
@@ -33,14 +34,17 @@ class bundles(commands.Cog):
 
         r = bundle_list_img("https://valorant-api.com/v1/bundles")
         if name not in r :
+            result_list = difflib.get_close_matches(name, r)
+            result_str = "▫"+"""\n▫""".join(str(e) for e in result_list)
+
             embed = discord.Embed(
                 color= 0x0AECFF
             )
             embed.add_field(name ="NO BUNDLE FOUND!", value=f"""
             make sure you type the `first letter capital` and `spell` it correcly
-            
             To get the list of embed use `{prefix}bunl`
             """)
+            embed.add_field(name ="SIMILAR BUNDLES",value=result_str, inline=False)
             await ctx.send(
                 embed=embed,
                 components=[

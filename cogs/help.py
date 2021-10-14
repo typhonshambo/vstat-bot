@@ -39,7 +39,7 @@ class help(commands.Cog):
             :small_blue_diamond: `{prefix}leaderboard <region> <amount>` -  shows leaderboard 
 
             **PLAYER STAT**
-            :small_blue_diamond: `{prefix}link <name> <tagline>` - link to you valorant account
+            :small_blue_diamond: `{prefix}link <name>#<tagline>` - link to you valorant account
             :small_blue_diamond: `{prefix}unlink` - unlink to you valorant account
             :small_blue_diamond: `{prefix}rank` - show your rank and some other infos
             :small_blue_diamond: `{prefix}profile` - show your profile
