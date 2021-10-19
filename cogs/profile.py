@@ -73,7 +73,8 @@ class profile(commands.Cog):
                     color=discord.Color.red()
                 )
                 embed.add_field(name ="SOME ERROR OCCURED...",value="""
-                Either your `username` \nor your `password` \nor your `region` is incorrect.
+                Please join our server to report this error. 
+                Alse make sure you have linked you account in `tracker.gg`
                 """,inline=False)
         
                 embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
@@ -92,8 +93,8 @@ class profile(commands.Cog):
                 color= discord.Color.red()
             )
             embed.add_field(name ="HOLD ON MAN !",value = f"""
-            you need to login to your account before you can use this command,
-            use `{prefix}login` to login to your account
+            you need to link to your account before you can use this command,
+            use `{prefix}h link` to know more.
             """,inline=False)
             embed.add_field(name="ALSO MAKE SURE THAT..",value="""
             you are logged in into tracker.gg, because profile command is powered by tracker.gg
