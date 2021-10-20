@@ -58,8 +58,8 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 2.22 rounds/sec
         """,inline=False)
         classic_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         classic_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         classic_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -98,9 +98,9 @@ class weapon(commands.Cog):
         shorty_embed.add_field(name="Cost", value =f"{data['cost']}")
 
         shorty_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
-        Body {data['damageRange2'][2]} | Head {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange2'][2]} | Body {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
         """,inline=False)
         shorty_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         shorty_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -139,8 +139,8 @@ class weapon(commands.Cog):
         frenzy_embed.add_field(name="Cost", value =f"{data['cost']}")
 
         frenzy_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         frenzy_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         frenzy_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -181,8 +181,8 @@ class weapon(commands.Cog):
         ghost_embed.add_field(name="Cost", value =f"{data['cost']}")
 
         ghost_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         ghost_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         ghost_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -224,8 +224,8 @@ class weapon(commands.Cog):
         sheriff_embed.add_field(name="Cost", value =f"{data['cost']}")
 
         sheriff_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         sheriff_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         sheriff_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -268,8 +268,8 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 8.471 rounds/sec
         """,inline=False)
         stinger_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         stinger_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         stinger_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -311,8 +311,8 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 12 rounds/sec
         """,inline=False)
         spectre_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         spectre_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         spectre_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -353,9 +353,9 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 1.1 rounds/sec
         """,inline=False)
         bucky_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
-        Body {data['damageRange2'][2]} | Head {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange2'][2]} | Body {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
         """,inline=False)
         bucky_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         bucky_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -392,9 +392,9 @@ class weapon(commands.Cog):
         judge_embed.add_field(name="Cost", value =f"{data['cost']}")
 
         judge_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
-        Body {data['damageRange2'][2]} | Head {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange2'][2]} | Body {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
         """,inline=False)
         judge_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         judge_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -433,7 +433,7 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: (6.555 rounds/sec)2.185 bursts/sec
         """,inline=False)
         bulldog_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
         """,inline=False)
         bulldog_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         bulldog_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -474,7 +474,7 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 4.275 rounds/sec
         """,inline=False)
         guardian_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
         """,inline=False)
         guardian_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         guardian_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -515,7 +515,7 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 8.775 rounds/sec
         """,inline=False)
         vandal_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
         """,inline=False)
         vandal_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         vandal_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -555,9 +555,9 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 9.9 rounds/sec
         """,inline=False)
         phantom_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
-        Body {data['damageRange2'][2]} | Head {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange2'][2]} | Body {data['damageRange2'][3]} | Leg {data['damageRange2'][4]} - **{data['damageRange2'][0]}m-{data['damageRange2'][1]}m**
         """,inline=False)
         phantom_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         phantom_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -597,7 +597,7 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 1.2 rounds/sec
         """,inline=False)
         marshall_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
         """,inline=False)
         marshall_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         marshall_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -639,7 +639,7 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 0.75 rounds/sec
         """,inline=False)
         operator_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
         """,inline=False)
         operator_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         operator_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -681,8 +681,8 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 15.6 rounds/sec
         """,inline=False)
         odin_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         odin_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         odin_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
@@ -722,8 +722,8 @@ class weapon(commands.Cog):
         :small_blue_diamond: Fire Rate: 10 rounds/sec
         """,inline=False)
         area_embed.add_field(name="Damage",value=f"""
-        Body {data['damageRange0'][2]} | Head {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
-        Body {data['damageRange1'][2]} | Head {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
+        Head {data['damageRange0'][2]} | Body {data['damageRange0'][3]} | Leg {data['damageRange0'][4]} - **{data['damageRange0'][0]}m-{data['damageRange0'][1]}m**
+        Head {data['damageRange1'][2]} | Body {data['damageRange1'][3]} | Leg {data['damageRange1'][4]} - **{data['damageRange1'][0]}m-{data['damageRange1'][1]}m**
         """,inline=False)
         area_embed.add_field(name="Magazine Capacity", value=f"{data['magazineSize']}")
         area_embed.add_field(name="Wall Penetration",value=f"{data['wallPenetration']}")
