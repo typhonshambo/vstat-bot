@@ -222,8 +222,8 @@ class help(commands.Cog):
         invite_help.add_field(name ="USAGE", value =f"""
         It will link the bot with your valorant account,
         so that you can access commands like 
-        - `{prefix} recent`
-        - `{prefix} rank`
+        - `{prefix}recent`
+        - `{prefix}rank`
 
         **NOTE**
         You need to link your profile with tracker.gg to use command  `{prefix}profile`
