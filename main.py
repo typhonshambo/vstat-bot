@@ -53,5 +53,15 @@ if __name__ == "__main__":
             print(f'Error loading {extension}', file=sys.stderr)
             traceback.print_exc()
 
+
+if __name__ == "__main__":
+    for slashextensions in slashextension:
+        try:
+            bot.load_extension(slashextensions)
+            print(f"[/] loaded | {slashextensions}")
+        except:
+            print(f'Error loading {slashextensions}', file=sys.stderr)
+            traceback.print_exc()
+
 bot.loop.run_until_complete(create_db_pool())
 bot.run(f"{token}")
