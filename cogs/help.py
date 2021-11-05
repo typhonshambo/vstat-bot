@@ -47,7 +47,7 @@ class help(commands.Cog):
 
             **BUNDLE**
             :small_blue_diamond: `{prefix}bundle <name>` - show image of bundle with <name>
-            :small_blue_diamond: `{prefix}bunl <name>` - show list of bundles available in game
+            :small_blue_diamond: `{prefix}bunl` - show list of bundles available in game
             """
         )
         help_embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
