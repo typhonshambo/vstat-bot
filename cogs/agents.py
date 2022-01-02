@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class skin(commands.Cog):
+class agent(commands.Cog):
     def __init__(self, client):
         self.client = client
 
@@ -29,6 +29,7 @@ class skin(commands.Cog):
         [14] YORU
         [15] ASTRA
         [16] KAY/O
+        [17] Chamber
         """)
         await ctx.send(embed=embed)
     
@@ -393,6 +394,27 @@ class skin(commands.Cog):
         """)
         embed.set_image(url="https://cdn.discordapp.com/attachments/864780326357827585/864944008198750239/latest.png")
         await ctx.send(embed=embed)
+
+    @agents.command(aliases=["Chamber"])
+    async def chamber(self, ctx):
+        embed = discord.Embed(
+            title='Chamber - Sentinel',
+            color=0xFFBE33
+        )
+        embed.add_field(name ="Country",value=" France",inline=False)
+        embed.add_field(name = "Abilities",
+        value="""
+        **C** - Trademark
+        **Q** - Headhunter
+        **E** -  Rendezvous
+       ** X** -  Tour De Force- **Ultimate**
+        """,inline=False)
+        embed.add_field(name = "Description",
+        value="""Well dressed and well armed, French weapons designer Chamber expels aggressors with deadly precision. He leverages his custom arsenal to hold the line and pick off enemies from afar, with a contingency built for every plan.""")
+        embed.set_image(url="https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/bustportrait.png")
+        await ctx.send(embed=embed)
+
+
 def setup(client):
-    client.add_cog(skin(client))
+    client.add_cog(agent(client))
     print("agents       | Imported")   
