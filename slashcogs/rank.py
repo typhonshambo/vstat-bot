@@ -29,7 +29,9 @@ class slash_rank(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
-	@commands.slash_command(guild_ids=[864779702554984458])
+	@commands.slash_command(
+		guild_ids=[864779702554984458], description="Get your rank"
+		)
 	async def rank(
 		self,
 		ctx

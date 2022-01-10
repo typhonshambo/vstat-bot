@@ -15,7 +15,7 @@ def agent_data(agentUuid):
 		"bustPortrait" : whole_data['data']['bustPortrait'], 
 		"abilities" : whole_data['data']['abilities']
 	}
-	print(data['abilities'])
+	
 	return data
 
 
@@ -24,9 +24,11 @@ class slash_agent(commands.Cog):
 		self.bot = bot
 		
 
-	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett']
+	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett', 'Chamber']
 	
-	@commands.slash_command(guild_ids=[864779702554984458])
+	@commands.slash_command(
+		guild_ids=[864779702554984458],
+		description="Get info. about agents")
 	async def agents(
 		self,
 		ctx,
@@ -48,7 +50,8 @@ class slash_agent(commands.Cog):
 				"Sage" : "569fdd95-4d10-43ab-ca70-79becc718b46",
 				"Reyna" : "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
 				"Omen" : "8e253930-4c05-31dd-1b6c-968525494517",
-				"Jett" : "add6443a-41bd-e414-f6ad-e58d267f4e95"
+				"Jett" : "add6443a-41bd-e414-f6ad-e58d267f4e95",
+				"Chamber" : "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
 			}
 
 			values = agent_data(agent_puuid[f'{agent}'])

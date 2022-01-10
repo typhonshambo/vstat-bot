@@ -1,6 +1,9 @@
 {
     "slashExtension":[
         "slashcogs.agents",
-        "slashcogs.rank"
+        "slashcogs.rank",
+        "slashcogs.acclink",
+        "slashcogs.maps",
+        "slashcogs.recentMatch"
     ]
 }
