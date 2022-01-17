@@ -20,7 +20,9 @@ agent_icons = {
 	'Skye' : '<:displayiconsmall11:875404907052666920>',
 	'Yoru' : '<:displayiconsmall15:875404902862569552>',
 	'Astra': '<:displayiconsmall4:875404906993954826>',
-	'KAY/O': '<:displayiconsmall12:875404906171875369>'
+	'KAY/O': '<:displayiconsmall12:875404906171875369>',
+	'Chamber': '<:displayiconsmall20:931574499814539364>',
+	'Neon': '<:displayiconsmall21:931575512692822056>'
 }
 
 
@@ -44,7 +46,9 @@ rank_icons = {
 	'Diamond 1' : '<:Diamond1:875258468263661568>',
 	'Diamond 2' : '<:Diamond2:875258469731668028> ',
 	'Diamond 3' : '<:Diamond3:875258469492617256> ',
-	'Immortal' : '<:Immortal:875258469756862494>',
+	'Immortal 1' : '<:Immortal:875258469303853056>',
+	'Immortal 2' : '<:Immortal2:875258469756862494>',
+	'Immortal 3' : '<:Immortal3:875258469035438091>',
 	'Radiant': '<:Radiant:875258469970759680> '
 }
 
@@ -65,7 +69,9 @@ agent_img={
 "Sage":"https://media.valorant-api.com/agents/569fdd95-4d10-43ab-ca70-79becc718b46/displayicon.png",
 "Reyna":"https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/displayicon.png",
 "Omen":"https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/displayicon.png",
-"Jett":"https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png"
+"Jett":"https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png",
+"Chamber" : "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
+"Neon" : "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png"
 }
 
 
@@ -146,7 +152,7 @@ class slash_recentmatch(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		
-	@commands.slash_command(guild_ids=[864779702554984458], description="Show your recent competitive match data")
+	@commands.slash_command(guild_ids=[864779702554984458],description="Show your recent competitive match data")
 	async def recent(
 		self,
 		ctx,
@@ -154,120 +160,120 @@ class slash_recentmatch(commands.Cog):
 		await ctx.response.defer()
 		author_id = str(ctx.author.id)
 		
-		try:
+		#try:
 
-			user = await self.bot.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
-			userid = user['puuid']
-			region   = user['region']
-			user_name = user['name']
-			tagline = user['tagline']
+		user = await self.bot.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
+		userid = user['puuid']
+		region   = user['region']
+		user_name = user['name']
+		tagline = user['tagline']
 
-			try:
+			#try:
 			
-				match_data = GetMatchData(region,userid)
-				
-				if match_data == None:
-					embed = discord.Embed(
-						color = discord.Color.red(),
-						description = """
-						You haven't played any Competitive Match !!
-						"""
-					)
-					await ctx.send(embed=embed)
-
-				else:
-					match_id = match_data
-					
-					mch_data , plr_data = matchStat(match_id)
-					
-
-					match_map = mch_data['match_info']['map_name']
-					match_date = mch_data["match_info"]["start"]
-					
-					plyr_list = plr_data.keys()
-
-					full_name = f'{user_name}'+f'{tagline}'
-					if full_name in list(plyr_list):
-						plyr_agent_img = plr_data[f'{full_name}']['agent_image_url']
-						plyr_team_name = plr_data[f'{full_name}']['team']
-						
-						match_result = mch_data[f'{plyr_team_name}']['won']
-
-
-						red_team_result = mch_data[f'Red']['won']
-						blue_team_result = mch_data[f'Blue']['won']
-						
-					
-
-						if red_team_result == False and blue_team_result == False:
-							match_fnl_result = "Draw"
-							avatr_img = "https://raw.githubusercontent.com/picklejason/ValorantRankedPointsBot/main/Resources/stable.png"
-						
-						elif match_result == True:
-							match_fnl_result = "VICTORY"
-							avatr_img = "https://i.imgur.com/X6yADlO.png"
-						elif match_result == False:
-							match_fnl_result = "DEFEAT"
-							avatr_img = "https://i.imgur.com/KOiVrrZ.png"
-
-					sorted_players = sorted(plr_data, key=lambda x: int(plr_data[x]["score"]), reverse=True)
-					team1 = "**Team 1**\n"
-					team2 = "**Team 2**\n"
-					for p in sorted_players:
-
-						if plr_data[p]["team"] == "Red":
-							team1 += f"{agent_icons[plr_data[p]['agent']]} | {rank_icons[plr_data[p]['rank']]} | {p} | **{plr_data[p]['kills']}**/**{plr_data[p]['deaths']}**/**{plr_data[p]['assists']}** | **{plr_data[p]['kd_ratio']}** K/D | **{plr_data[p]['score']}** ACS\n"
-						elif plr_data[p]["team"] == "Blue":
-							team2 += f"{agent_icons[plr_data[p]['agent']]} | {rank_icons[plr_data[p]['rank']]} | {p} | **{plr_data[p]['kills']}**/**{plr_data[p]['deaths']}**/**{plr_data[p]['assists']}** | **{plr_data[p]['kd_ratio']}** K/D | **{plr_data[p]['score']}** ACS\n"
-
-
-
-
-					embed = discord.Embed(
-						color = 0x00FFFF,
-					
-						description = team1+'\n'+team2,
-					)
-					# embed.set_image(url=f"{map_image_url}")
-					embed.set_author(name=match_map +' | '+match_fnl_result,icon_url=avatr_img)
-					embed.set_footer(text=f"🟢 {match_date} UTC")
-					embed.set_thumbnail(url=f"{plyr_agent_img}")
-
-					await ctx.respond(embed=embed)
-
-
-					
-				
-				
-			except:
-				embed= discord.Embed(
-					color=discord.Color.red()
-				)
-				embed.add_field(name ="SOME ERROR OCCURED...",value="""
-				Please join our support server to report this error!
-				just click on the button given below to continue.
-				""",inline=False)
-
-				embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
-				await ctx.send(
-					embed=embed,
-					components=[
-						[
-							Button(label="Support Server", style=5, url="https://discord.gg/m5mSyTV7RR"),
-							Button(label="Vote", style=5, url="https://top.gg/bot/864451929346539530/vote")
-						]
-					]
-				)
-			
-		except:
+		match_data = GetMatchData(region,userid)
+		
+		if match_data == None:
 			embed = discord.Embed(
-				color= discord.Color.red()
+				color = discord.Color.red(),
+				description = """
+				You haven't played any Competitive Match !!
+				"""
 			)
-			embed.add_field(name ="HOLD ON MAN !",value = f"""
-			you need to link your account before you can use this command,
-			use `/h link` to know more!
-			""")
-			await ctx.send(embed=embed)
+			await ctx.respond(embed=embed)
+
+		else:
+			match_id = match_data
+			
+			mch_data , plr_data = matchStat(match_id)
+			print(plr_data)
+
+			match_map = mch_data['match_info']['map_name']
+			match_date = mch_data["match_info"]["start"]
+			
+			plyr_list = plr_data.keys()
+
+			full_name = f'{user_name}'+f'{tagline}'
+			#if full_name in list(plyr_list):
+			plyr_agent_img = plr_data[f'{full_name}']['agent_image_url']
+			plyr_team_name = plr_data[f'{full_name}']['team']
+			
+			match_result = mch_data[f'{plyr_team_name}']['won']
+
+
+			red_team_result = mch_data[f'Red']['won']
+			blue_team_result = mch_data[f'Blue']['won']
+				
+			
+
+			if red_team_result == False and blue_team_result == False:
+				match_fnl_result = "Draw"
+				avatr_img = "https://raw.githubusercontent.com/picklejason/ValorantRankedPointsBot/main/Resources/stable.png"
+			
+			elif match_result == True:
+				match_fnl_result = "VICTORY"
+				avatr_img = "https://i.imgur.com/X6yADlO.png"
+			elif match_result == False:
+				match_fnl_result = "DEFEAT"
+				avatr_img = "https://i.imgur.com/KOiVrrZ.png"
+
+			sorted_players = sorted(plr_data, key=lambda x: int(plr_data[x]["score"]), reverse=True)
+			team1 = "**Team 1**\n"
+			team2 = "**Team 2**\n"
+			for p in sorted_players:
+
+				if plr_data[p]["team"] == "Red":
+					team1 += f"{agent_icons[plr_data[p]['agent']]} | {rank_icons[plr_data[p]['rank']]} | {p} | **{plr_data[p]['kills']}**/**{plr_data[p]['deaths']}**/**{plr_data[p]['assists']}** | **{plr_data[p]['kd_ratio']}** K/D | **{plr_data[p]['score']}** ACS\n"
+				elif plr_data[p]["team"] == "Blue":
+					team2 += f"{agent_icons[plr_data[p]['agent']]} | {rank_icons[plr_data[p]['rank']]} | {p} | **{plr_data[p]['kills']}**/**{plr_data[p]['deaths']}**/**{plr_data[p]['assists']}** | **{plr_data[p]['kd_ratio']}** K/D | **{plr_data[p]['score']}** ACS\n"
+
+
+
+
+			embed = discord.Embed(
+				color = 0x00FFFF,
+			
+				description = team1+'\n'+team2,
+			)
+			# embed.set_image(url=f"{map_image_url}")
+			embed.set_author(name=match_map +' | '+match_fnl_result,icon_url=avatr_img)
+			embed.set_footer(text=f"🟢 {match_date} UTC")
+			embed.set_thumbnail(url=f"{plyr_agent_img}")
+
+			await ctx.respond(embed=embed)
+
+
+					
+				
+				
+		# 	except:
+		# 		embed= discord.Embed(
+		# 			color=discord.Color.red()
+		# 		)
+		# 		embed.add_field(name ="SOME ERROR OCCURED...",value="""
+		# 		Please join our support server to report this error!
+		# 		just click on the button given below to continue.
+		# 		""",inline=False)
+
+		# 		embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
+				
+		# 		view = discord.ui.View()
+		# 		view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
+		# 		view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
+				
+		# 		await ctx.respond(
+		# 			embed=embed,
+		# 			view=view
+		# 		)
+			
+		# except:
+		# 	embed = discord.Embed(
+		# 		color= discord.Color.red()
+		# 	)
+		# 	embed.add_field(name ="HOLD ON MAN !",value = f"""
+		# 	you need to link your account before you can use this command,
+		# 	use `/h link` to know more!
+		# 	""")
+		# 	await ctx.respond(embed=embed)
 
 def setup(bot):
 	bot.add_cog(slash_recentmatch(bot))

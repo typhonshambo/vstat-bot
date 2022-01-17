@@ -1,23 +1,31 @@
+from distutils import errors
+import json
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
 from discord_components import *
 import requests
+import json
+
+
 
 def accountData(name, tagline):
 	r  = requests.get(f'https://api.henrikdev.xyz/valorant/v1/account/{name}/{tagline}')
 	data = r.json()
 
+
 	puuid = data['data']['puuid']
 	region = data['data']['region']
+	username = data['data']['name']
+	tag = data['data']['tag']
 
-	return puuid, region
+	return puuid, region, username, tag
 
 class slash_acclink(commands.Cog):
 	def __init__(self, bot):
 			self.bot = bot
 
-	@commands.slash_command(guild_ids=[864779702554984458], description="Link to your Valorant account")
+	@commands.slash_command(description="Link to your Valorant account")
 	async def link(
 		self,
 		ctx,
@@ -25,29 +33,49 @@ class slash_acclink(commands.Cog):
 		tagline: Option(str, "Enter your ingame tag", required=True),
 	):
 		await ctx.response.defer()
-		author_id = str(ctx.author.id)
-		user = await self.bot.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
 
-		if not user:
-			puuid , region = accountData(username, tagline)
-			await self.bot.pg_con.execute("INSERT INTO acclink (userid, name, tagline, puuid, region) VALUES ($1, $2, $3, $4, $5)", author_id, username, tagline, str(puuid), str(region))
+		try:
+
+			author_id = str(ctx.author.id)
+			user = await self.bot.pg_con.fetchrow("SELECT * FROM acclink WHERE userid = $1", author_id)
+			if not user:
+				
+				puuid , region, user_id, tag = accountData(username, tagline)
+				
+
+				await self.bot.pg_con.execute("INSERT INTO acclink (userid, name, tagline, puuid, region) VALUES ($1, $2, $3, $4, $5)", author_id, user_id, tag, str(puuid), str(region))
+				embed = discord.Embed(
+					color = discord.Color.random(),
+					description="Successfully linked"
+				)
+				await ctx.respond(embed=embed)
+
+			if user:
+    				
+				puuid , region, user_id, tag = accountData(username, tagline)
+				await self.bot.pg_con.execute("UPDATE acclink SET name = $1, tagline = $2, puuid=$3, region=$4  WHERE userid = $5",user_id, tag,str(puuid), str(region), author_id)
+				embed = discord.Embed(
+					color = discord.Color.random(),
+					description="Successfully linked"
+				)
+				await ctx.respond(embed=embed)
+
+		except:
+
+			view = discord.ui.View()
+			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
+			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
+			
 			embed = discord.Embed(
-				color = discord.Color.random(),
-				description="Successfully linked"
+				color = discord.Color.red(),
+				description="Some error occured"
 			)
-			await ctx.respond(embed=embed)
-
-		if user:
-			puuid , region = accountData(username, tagline)
-			await self.bot.pg_con.execute("UPDATE acclink SET name = $1, tagline = $2, puuid=$3, region=$4  WHERE userid = $5",username, tagline,str(puuid), str(region), author_id)
-			embed = discord.Embed(
-				color = discord.Color.random(),
-				description="Successfully linked"
+			await ctx.respond(
+				embed=embed,
+				view=view
 			)
-			await ctx.respond(embed=embed)
 
-
-	@commands.slash_command(guild_ids=[864779702554984458], description="UnLink to your Valorant account")
+	@commands.slash_command(description="UnLink to your Valorant account")
 	async def unlink(
 		self,
 		ctx,

@@ -18,16 +18,18 @@ def agent_data(agentUuid):
 	
 	return data
 
-
+ 
 class slash_agent(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		
 
-	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett', 'Chamber']
+		
+	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett', 'Chamber','Neon']
 	
+	
+
 	@commands.slash_command(
-		guild_ids=[864779702554984458],
 		description="Get info. about agents")
 	async def agents(
 		self,
@@ -51,7 +53,8 @@ class slash_agent(commands.Cog):
 				"Reyna" : "a3bfb853-43b2-7238-a4f1-ad90e9e46bcc",
 				"Omen" : "8e253930-4c05-31dd-1b6c-968525494517",
 				"Jett" : "add6443a-41bd-e414-f6ad-e58d267f4e95",
-				"Chamber" : "22697a3d-45bf-8dd7-4fec-84a9e28c69d7"
+				"Chamber" : "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",
+				"Neon" : "bb2a4828-46eb-8cd1-e765-15848195d751"
 			}
 
 			values = agent_data(agent_puuid[f'{agent}'])
