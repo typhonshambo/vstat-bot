@@ -1,0 +1,33 @@
+{
+    "agents": {
+        "usage": "It will show details regarding a given Valorant Agent on the basis of choosen agent.",
+        "options" : "`agent`",
+        "options_req" : "`True`"
+    },
+    "link" :{
+        "usage" : "Link to Valorant account to get different stats",
+        "options" : "`username`, `tagline`",
+        "options_req" : "`True`"
+    },
+    "maps" :{
+        "usage" : "Sends an image of Map on the basis of choosen map in options.",
+        "options" : "`map`",
+        "options_req" : "`True`"
+    },
+    "profile" :{
+        "usage" : "Get your in-game account datas like level, region, player-ID etc. But make sure you need to use `/link` before using this command",
+        "options" : "`None`",
+        "options_req" : "`None`"
+    },
+    "rank" :{
+        "usage" : "Get your in-game MMR datas like rank, MMR-changed in last game, tier etc. But make sure you need to use `/link` before using this command",
+        "options" : "`None`",
+        "options_req" : "`None`"
+    },
+    "recent" :{
+        "usage" : "Get the leaderboard of your last competitive match along with some stats. But make sure you need to use `/link` before",
+        "options" : "`None`",
+        "options_req" : "`None`"
+    }
+    
+}

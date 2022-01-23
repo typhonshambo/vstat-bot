@@ -3,7 +3,6 @@ import json
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
-from discord_components import *
 import requests
 import json
 

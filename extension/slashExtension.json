@@ -4,6 +4,9 @@
         "slashcogs.rank",
         "slashcogs.acclink",
         "slashcogs.maps",
-        "slashcogs.recentMatch"
+        "slashcogs.recentMatch",
+        "slashcogs.profile",
+        "slashcogs.help",
+        "slashcogs.vote"
     ]
 }
