@@ -8,6 +8,7 @@
         "slashcogs.profile",
         "slashcogs.help",
         "slashcogs.vote",
-        "slashcogs.bundles"
+        "slashcogs.bundles",
+        "slashcogs.leaderboard"
     ]
 }
