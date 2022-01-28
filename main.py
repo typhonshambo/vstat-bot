@@ -41,17 +41,7 @@ async def on_ready():
 
 
 
-with open ('extension/extension.json', 'r') as data:
-    cog_data = json.load(data)
-    extension = cog_data['extension']
 
-if __name__ == "__main__":
-    for extension in extension:
-        try:
-            bot.load_extension(extension)
-        except:
-            print(f'Error loading {extension}', file=sys.stderr)
-            traceback.print_exc()
 
 
 if __name__ == "__main__":
