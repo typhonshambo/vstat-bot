@@ -41,7 +41,9 @@ async def on_ready():
 
 
 
-
+with open ('extension/slashExtension.json', 'r') as data:
+    cog_data = json.load(data)
+    slashextension = cog_data['slashExtension']
 
 
 if __name__ == "__main__":
