@@ -29,7 +29,7 @@ class slash_bundles(commands.Cog):
 		def __init__(self, bot):
 			self.bot = bot
 	
-		@commands.slash_command(guild_ids=[864779702554984458],description="Get info. about bundle")
+		@commands.slash_command(description="Get info. about bundle")
 		async def bundles(
 			self,
 			ctx,
