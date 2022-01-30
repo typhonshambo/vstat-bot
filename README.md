@@ -1,6 +1,8 @@
 # <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
 
-
+# NOTE [important]
+As, discord is shifting from normal commands to SLASH COMMANDS so, i won't update the normal commands rather i have made a branch for slash commands on which i am working on
+[click here](https://github.com/typhonshambo/Valorant-server-stat-bot/tree/slash) to go there.
 
 # Table Of Contents
 1. [Installation](#installation)
