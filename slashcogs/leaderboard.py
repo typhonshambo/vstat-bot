@@ -33,7 +33,7 @@ class slash_leaderboard(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
-	@commands.slash_command(description="Get help regarding Vstat")
+	@commands.slash_command(description="Get Leaderboard of Top players")
 	async def leaderboard(
 		self,
 		ctx,

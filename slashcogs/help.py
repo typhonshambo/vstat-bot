@@ -13,19 +13,14 @@ with open ('././extension/help.json', 'r') as f:
 class slash_help(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
-
-
-	command_list = [
-	'link',
-	'agents',
-	'maps',
-	'profile',
-	'recent',
-	'rank'
-	]
-
 	
-	@commands.slash_command(description="Get help regarding Vstat")
+	command_list = []
+	for keys in helpdata.keys():
+		command_list.append(str(keys))		
+
+
+	print(command_list)
+	@commands.slash_command(guild_ids=[864779702554984458],description="Get help regarding Vstat")
 	async def help(
 		self,
 		ctx,
@@ -42,10 +37,12 @@ class slash_help(commands.Cog):
 				**GAME INFO**
 				> <:slashcommand:934362483290943598>  `agents` - Get info. about any agent.
 				> <:slashcommand:934362483290943598>  `maps` - get info about any map.
-
+				> <:slashcommand:934362483290943598>  `bundles` - Show list of bundles and allows search also
+				
 				**PLAYER STATS**
 				> <:slashcommand:934362483290943598>  `profile` - Show data related to your in-game profile.
 				> <:slashcommand:934362483290943598>  `recent` - get you recent competitive match leaderboard.
+				> <:slashcommand:934362483290943598>  `leaderboard` - get leaderbord for a region.
 				"""
 			)
 			embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
