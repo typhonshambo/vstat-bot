@@ -19,7 +19,7 @@ class slash_help(commands.Cog):
 		command_list.append(str(keys))		
 
 
-	@commands.slash_command(description="Get help regarding Vstat")
+	@commands.slash_command(guild_ids=[864779702554984458],description="Get help regarding Vstat")
 	async def help(
 		self,
 		ctx,
@@ -36,7 +36,8 @@ class slash_help(commands.Cog):
 				**GAME INFO**
 				> <:slashcommand:934362483290943598>  `agents` - Get info. about any agent.
 				> <:slashcommand:934362483290943598>  `maps` - get info about any map.
-				> <:slashcommand:934362483290943598>  `bundles` - Show list of bundles and allows search also
+				> <:slashcommand:934362483290943598>  `bundles` - Show list of bundles and allows search also.
+				> <:slashcommand:934362483290943598>  `weapon` - Show stats and info. of any weapon.
 				
 				**PLAYER STATS**
 				> <:slashcommand:934362483290943598>  `profile` - Show data related to your in-game profile.

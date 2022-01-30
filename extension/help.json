@@ -37,7 +37,12 @@
     "bundles" :{
         "usage" : "Will show the list of available bundles and also allows to search for perticular bundle and show it's image",
         "options" : "`search`",
-        "options_req" : "False"
+        "options_req" : "`False`"
+    },
+    "weapon" : {
+        "usage" : "Will show the details regarding a weapon and its stats",
+        "options" : "`name`",
+        "options_req" : "`True`"
     }
     
 }

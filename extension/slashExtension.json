@@ -9,6 +9,7 @@
         "slashcogs.help",
         "slashcogs.vote",
         "slashcogs.bundles",
-        "slashcogs.leaderboard"
+        "slashcogs.leaderboard",
+        "slashcogs.weapon"
     ]
 }
