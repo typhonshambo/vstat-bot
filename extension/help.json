@@ -28,6 +28,16 @@
         "usage" : "Get the leaderboard of your last competitive match along with some stats. But make sure you need to use `/link` before",
         "options" : "`None`",
         "options_req" : "`None`"
+    },
+    "leaderboard" :{
+        "usage" : "Get the leaderboard of your region",
+        "options" : "`region`, `amount`",
+        "options_req" : "`region`"
+    },
+    "bundles" :{
+        "usage" : "Will show the list of available bundles and also allows to search for perticular bundle and show it's image",
+        "options" : "`search`",
+        "options_req" : "False"
     }
     
 }
