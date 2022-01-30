@@ -42,7 +42,7 @@ class slash_maps(commands.Cog):
 	map_list, map_full_values = map_data()
 	map_list.remove("The Range")
 	
-	@commands.slash_command(guild_ids=[864779702554984458],description="Get info. about maps")
+	@commands.slash_command(description="Get info. about maps")
 	async def maps(
 			self,
 			ctx,

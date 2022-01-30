@@ -152,7 +152,7 @@ class slash_recentmatch(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		
-	@commands.slash_command(guild_ids=[864779702554984458],description="Show your recent competitive match data")
+	@commands.slash_command(description="Show your recent competitive match data")
 	async def recent(
 		self,
 		ctx,

@@ -91,7 +91,7 @@ class slash_acclink(commands.Cog):
 					description = f"""
 					You have not linked your account yet. 
 					please link your account first to unlink it.
-					user `\help link` to know more 
+					user `/link` to do it now. 
 					"""
 				)
 				await ctx.respond(embed=embed)

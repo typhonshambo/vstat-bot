@@ -19,7 +19,7 @@ class slash_help(commands.Cog):
 		command_list.append(str(keys))		
 
 
-	@commands.slash_command(guild_ids=[864779702554984458],description="Get help regarding Vstat")
+	@commands.slash_command(description="Get help regarding Vstat")
 	async def help(
 		self,
 		ctx,

@@ -35,7 +35,7 @@ class slash_profile(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
-	@commands.slash_command(guild_ids=[864779702554984458], description="Info about your valorant account")
+	@commands.slash_command( description="Info about your valorant account")
 	async def profile(
 			self,
 			ctx
@@ -78,7 +78,7 @@ class slash_profile(commands.Cog):
 					description = f"""
 					You have not linked your account yet. 
 					please link your account first to unlink it.
-					user `\help link` to know more 
+					user `/link` to do it now.
 					"""
 				)
 				await ctx.respond(embed=embed)
