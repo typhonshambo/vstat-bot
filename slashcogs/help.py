@@ -19,7 +19,6 @@ class slash_help(commands.Cog):
 		command_list.append(str(keys))		
 
 
-	print(command_list)
 	@commands.slash_command(description="Get help regarding Vstat")
 	async def help(
 		self,
