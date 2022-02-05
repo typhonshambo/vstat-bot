@@ -71,9 +71,9 @@ class slash_leaderboard(commands.Cog):
 				embed = discord.Embed(
 					color = 0x33FFD1
 				)
-				embed.add_field(name = "LEADERBOARD", value =leaderboard)
-				embed.add_field(name = "WINS", value=wins)
-				embed.add_field(name = "RR", value=rr)
+				embed.add_field(name = "LEADERBOARD", value =leaderboard,inline=True)
+				embed.add_field(name = "WINS", value=wins, inline=True)
+				embed.add_field(name = "RR", value=rr, inline=True)
 				embed.set_thumbnail(url="https://media.valorant-api.com/competitivetiers/e4e9a692-288f-63ca-7835-16fbf6234fda/24/largeicon.png")
 				
 				view = discord.ui.View()
