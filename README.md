@@ -3,7 +3,7 @@
 
 # Table Of Contents
 
-<img align="right" alt="GIF" src="https://i.imgur.com/FMRbIaR.png" width="200" style="border-radius:20%"/>
+<img align="right" alt="GIF" src="https://i.imgur.com/bRuHLso.png" width="200"/>
 
 1. [Installation](#installation)
 2. [Database Note](#database-note)
