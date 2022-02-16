@@ -1,8 +1,10 @@
-# <h1 align="center"> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">Valorant Server Status Bot </h> <img src="https://toppng.com/public/uploads/thumbnail/valorant-logo-icon-11608279985fgrckoiiql.png" width="30px">
-
+<center><img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=VSTAT&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" /></center>
 
 
 # Table Of Contents
+
+<img align="right" alt="GIF" src="https://i.imgur.com/FMRbIaR.png" width="200" style="border-radius:50%"/>
+
 1. [Installation](#installation)
 2. [Database Note](#database-note)
 3. [Database Setup](#database-setup)
