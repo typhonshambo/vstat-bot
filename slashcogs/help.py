@@ -38,7 +38,8 @@ class slash_help(commands.Cog):
 				> <:slashcommand:934362483290943598>  `maps` - get info about any map.
 				> <:slashcommand:934362483290943598>  `bundles` - Show list of bundles and allows search also.
 				> <:slashcommand:934362483290943598>  `weapon` - Show stats and info. of any weapon.
-				
+				> <:slashcommand:934362483290943598>  `skin` -  Shows image and video on skins.
+
 				**PLAYER STATS**
 				> <:slashcommand:934362483290943598>  `profile` - Show data related to your in-game profile.
 				> <:slashcommand:934362483290943598>  `recent` - get you recent competitive match leaderboard.

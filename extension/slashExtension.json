@@ -10,6 +10,7 @@
         "slashcogs.vote",
         "slashcogs.bundles",
         "slashcogs.leaderboard",
-        "slashcogs.weapon"
+        "slashcogs.weapon",
+        "slashcogs.skins"
     ]
 }

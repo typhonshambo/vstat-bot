@@ -43,6 +43,11 @@
         "usage" : "Will show the details regarding a weapon and its stats",
         "options" : "`name`",
         "options_req" : "`True`"
+    },
+    "skin" : {
+        "usage" : "Allows search for a in-game skin with name and shows a image and Video of that skin if available.",
+        "options" : "`level`",
+        "options_req" : "`True`"
     }
     
 }
