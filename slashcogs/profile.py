@@ -6,6 +6,9 @@ from discord.commands import Option, slash_command
 import requests
 import json
 
+with open ('././extension/emoji.json', 'r') as f:
+	emojidata = json.load(f)
+
 def profile_info(username, tagline):
 	api_Req = requests.get(f"https://api.henrikdev.xyz/valorant/v1/account/{username}/{tagline}")
 	data = api_Req.json()
@@ -40,6 +43,9 @@ class slash_profile(commands.Cog):
 			self,
 			ctx
 		):
+			
+			REPLY_EMOTE = emojidata["reply"] # there is a reason why i did this ;-;
+			
 
 			await ctx.response.defer()
 			author_id = str(ctx.author.id)
@@ -54,20 +60,24 @@ class slash_profile(commands.Cog):
 
 				embed = discord.Embed(
 					color = discord.Colour.random(),
-					timestamp=discord.utils.utcnow(),
-					description= f"""
-					:white_small_square: **REGION** - {data["region"]}
-					:white_small_square: **ACCOUNT LEVEL** - {data["account_level"]}
-					:white_small_square: **NAME** - {data["name"]}
-					:white_small_square: **TAG** - {data["tag"]}
-					:white_small_square: **PUUID** - {data["puuid"]}
-					"""
+					timestamp=discord.utils.utcnow()
 				)
+				embed.add_field(name ="Region", value=f'{REPLY_EMOTE}{data["region"]}', inline=False)
+				embed.add_field(name ="Account Level", value=f'{REPLY_EMOTE}{data["account_level"]}', inline=False)
+				embed.add_field(name ="Name", value=f'{REPLY_EMOTE}{data["name"]}', inline=False)
+				embed.add_field(name ="Tag", value=f'{REPLY_EMOTE}{data["tag"]}')
+				embed.add_field(name ="PUUID", value=f'{REPLY_EMOTE}{data["puuid"]}', inline=False)
+
 				embed.set_footer(text="🟢 Linked")
 				embed.set_image(url=data["image"])
 				embed.set_author(name=data["name"],icon_url=data["thumbnail"])
 				embed.set_thumbnail(url=f"https://raw.githubusercontent.com/typhonshambo/Valorant-server-stat-bot/main/assets/valorantRankImg/{rank}.png")
-				await ctx.respond(embed=embed)
+				
+				view = discord.ui.View()
+				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
+				
+				await ctx.respond(embed=embed, view=view)
 			
 			
 			
