@@ -8,17 +8,16 @@
 1. [Installation](#installation)
 2. [Database Note](#database-note)
 3. [Database Setup](#database-setup)
-4. [Commands Integrated With Database](#commands-integrated-with-database)
-5. [Command List](#command-list)
-7. [Region List](#region-list)
-8. [Required Packages](#required-packages)
-9. [Screenshots](#screenshots)
-10. [Support Server](#support-server)
-11. [Bot Invite](#bot-invite)
-12. [Screenshots](#screenshots)
-13. [Support Server](#support-server)
-14. [Contributors](#contributors)
-15. [Donation](#donation) 
+4. [Command List](#command-list)
+5. [Region List](#region-list)
+6. [Required Packages](#required-packages)
+7. [Screenshots](#screenshots)
+8. [Support Server](#support-server)
+9. [Bot Invite](#bot-invite)
+10. [BOT showcase](#BOT-showcase)
+11. [Support Server](#support-server)
+12. [Contributors](#contributors)
+13. [Donation](#donation) 
 
 
 
@@ -65,33 +64,13 @@ Your database must contain a table called `acclink` and the table should contain
 | puuid                    | character varying                       |
 | region                   | character varying                       |
 
-### COMMANDS-INTEGRATED-WITH-DATABASE
 
-- profile
-- rank
  
 
 ## COMMAND-LIST
 
 
-|  Command                 | description                                |
-| ------------------------ | ------------------------------------------ |
-| vstat <region_name>      | Shows valorant server of <region_name>     |
-| agent <agent_name>       | Shows description of <agent_name>          |
-| map <map_name>           | Shows description of <map_name>            |
-| weapon <weapon_name>     | Shows description of weapon                |
-| invite                   | Invite the bot to your server              |  
-| ace                      | send ace sounds of different skins         |
-| skin                     | shows info regarding skins                 |
-| spec                     | shows specs required for valorant          |
-| shop                     | shows your valorant shop of you account    |
-| link <ingame_name>                    | Link to you valorant account     |
-| bunl                     | show list of all available skin bundles    |
-| bundle <name>            | show info of <name> bundle                 |
-| rank                     | show rank in valorant                      | 
-| profile                  | show your profile (K/d, rank, win rate)    |
-| recent                   | show stats regarding your last compi match |
-
+[List of commands are available here](https://github.com/typhonshambo/Valorant-server-stat-bot/blob/slash/extension/help.json)
 
 
 ## REGION-LIST
@@ -126,12 +105,10 @@ here is one ready made bot, which you can add in your server :)
 [click here to invite](https://discord.com/api/oauth2/authorize?client_id=864451929346539530&permissions=2885938240&scope=bot)
 
 
-## SCREENSHOTS
+## BOT-showcase
 
-<img src="https://media.discordapp.net/attachments/864780326357827585/865498761430040586/qguSfRKTRS.gif?width=383&height=183" width="425"/> 
-<img src="https://media.discordapp.net/attachments/864780326357827585/865498772309016596/kLT8b34NgH.gif?width=510&height=470" width="425"/> 
-<img src="https://media.discordapp.net/attachments/864780326357827585/865498769260150784/KHEjo5qpa0.gif?width=515&height=472" width="425"/>
-<img src="assets/profile_screenshot.png" width="425"/>
+<img src="https://raw.githubusercontent.com/typhonshambo/Valorant-server-stat-bot/b3114f16d84c8a2db2d4da2383bcb5019aa8383d/assets/VSTAT.svg" width="850"/> 
+
 
 
 ## SUPPORT-SERVER
