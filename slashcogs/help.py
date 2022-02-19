@@ -6,6 +6,10 @@ from discord_components import *
 import requests
 import json
 
+with open ('././extension/emoji.json', 'r') as f:
+	emojidata = json.load(f)
+
+
 with open ('././extension/help.json', 'r') as f:
 	helpdata = json.load(f)
 	
@@ -49,16 +53,18 @@ class slash_help(commands.Cog):
 			embed.set_thumbnail(url="https://i.imgur.com/A45DVhf.gif")
 
 			view = discord.ui.View()
-			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
+			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
+			view.add_item(discord.ui.Button(label='Github', url='https://github.com/typhonshambo/Valorant-server-stat-bot/tree/slash', style=discord.ButtonStyle.url, emoji=emojidata["github"]))
 			await ctx.respond(embed=embed, view=view)
 
 
 		elif helpcommands != None:
-				
-			view = discord.ui.View()	
-			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
+    			
+			view = discord.ui.View()
+			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
+			view.add_item(discord.ui.Button(label='Github', url='https://github.com/typhonshambo/Valorant-server-stat-bot/tree/slash', style=discord.ButtonStyle.url, emoji=emojidata["github"]))
 
 			embed = discord.Embed(
 				color = discord.Color.random(), 

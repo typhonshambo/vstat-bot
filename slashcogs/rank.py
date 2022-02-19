@@ -5,6 +5,9 @@ import requests
 import json
 import asyncio
 
+with open ('././extension/emoji.json', 'r') as f:
+	emojidata = json.load(f)
+
 with open ('././config/config.json', 'r') as f:
 	config = json.load(f)
 	prefix = config['prefix']
@@ -34,6 +37,9 @@ class slash_rank(commands.Cog):
 		self,
 		ctx
 	):
+		reply_emote = emojidata["reply"]
+		Unranked_emote = emojidata["Unrated"]
+
 		await ctx.response.defer()
 
 		author_id = str(ctx.author.id)
@@ -51,27 +57,25 @@ class slash_rank(commands.Cog):
 
 					embed = discord.Embed(
 						color=discord.Colour.random(),
-						title="RANK",
+						title=f"{Unranked_emote} | RANK",
 						timestamp=discord.utils.utcnow()
 					)
-					embed.add_field(name ="Current Rank",value=f"{RANK_DATA['currenttierpatched']}",inline=False)
-					embed.add_field(name ="Ranking in Tier",value=f"{RANK_DATA['ranking_in_tier']}",inline=False)
-					embed.add_field(name ="MMR Change last game",value=f"{RANK_DATA['mmr_change_to_last_game']}",inline=False)
-					embed.add_field(name ="Elo",value=f"{RANK_DATA['elo']}",inline=False)
-					embed.add_field(name ="Games Needed for Rating",value=f"{RANK_DATA['games_needed_for_rating']}",inline=False)
+					embed.add_field(name ="Current Rank",value=f"{reply_emote}{RANK_DATA['currenttierpatched']}",inline=False)
+					embed.add_field(name ="Ranking in Tier",value=f"{reply_emote}{RANK_DATA['ranking_in_tier']}",inline=False)
+					embed.add_field(name ="MMR Change last game",value=f"{reply_emote}{RANK_DATA['mmr_change_to_last_game']}",inline=False)
+					embed.add_field(name ="Elo",value=f"{reply_emote}{RANK_DATA['elo']}",inline=False)
+					embed.add_field(name ="Games Needed for Rating",value=f"{reply_emote}{RANK_DATA['games_needed_for_rating']}",inline=False)
 
 					embed.set_thumbnail(url=f"https://raw.githubusercontent.com/typhonshambo/Valorant-server-stat-bot/main/assets/valorantRankImg/{RANK_DATA['currenttier']}.png")
 
 					view = discord.ui.View()
-					view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-					view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
-				
+					view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+					view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
 					await ctx.respond(embed=embed, view=view)
 			except:
 				view = discord.ui.View()
-				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
-				
+				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
 				embed= discord.Embed(
 					color=discord.Color.red()
 				)
