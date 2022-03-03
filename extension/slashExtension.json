@@ -11,6 +11,8 @@
         "slashcogs.bundles",
         "slashcogs.leaderboard",
         "slashcogs.weapon",
-        "slashcogs.skins"
+        "slashcogs.skins",
+
+        "slashcogs.guildOnly.serverlist"
     ]
 }

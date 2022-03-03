@@ -43,6 +43,7 @@ class slash_help(commands.Cog):
 				> <:slashcommand:934362483290943598>  `bundles` - Show list of bundles and allows search also.
 				> <:slashcommand:934362483290943598>  `weapon` - Show stats and info. of any weapon.
 				> <:slashcommand:934362483290943598>  `skin` -  Shows image and video on skins.
+				> <:slashcommand:934362483290943598>  `server` -  Shows the server info.
 
 				**PLAYER STATS**
 				> <:slashcommand:934362483290943598>  `profile` - Show data related to your in-game profile.
