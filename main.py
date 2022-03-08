@@ -4,7 +4,6 @@ import traceback
 import sys
 import json 
 import requests
-from discord_components import *
 
 #for database
 import asyncpg
@@ -37,7 +36,6 @@ async def on_ready():
         activity=discord.Activity(type=discord.ActivityType.watching, name=f"{prefix}help")
     )
     print("Bot online!")
-    DiscordComponents(bot)
 
 
 
