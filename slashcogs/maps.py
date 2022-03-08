@@ -1,11 +1,15 @@
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
-from discord_components import *
 import requests
+import json
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 def map_data():
-	req_data = requests.get("https://valorant-api.com/v1/maps")
+	req_data = requests.get("https://valorant-api.com/v1/maps", headers=headers)
 	whole_data = req_data.json()
 
 	i = 0
@@ -22,7 +26,7 @@ def map_data():
 	return map_list, map_full_values
 
 def end_data(puuid):
-	req_data = requests.get(f"https://valorant-api.com/v1/maps/{puuid}")
+	req_data = requests.get(f"https://valorant-api.com/v1/maps/{puuid}", headers=headers)
 	whole_data = req_data.json()
 	
 	data = {}
