@@ -4,9 +4,14 @@ from discord.commands import Option, slash_command
 import requests
 import difflib
 import string
+import json
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 def skin_list():
-    r = requests.get("https://valorant-api.com/v1/weapons/skins")
+    r = requests.get("https://valorant-api.com/v1/weapons/skins",headers=headers)
     data = r.json()
 
     SKIN_LIST = []
@@ -21,7 +26,7 @@ def skin_list():
     return SKIN_LIST, SKIN_PUUIDS
 
 def skin_data(puuid):
-    r = requests.get(f"https://valorant-api.com/v1/weapons/skins/{puuid}")
+    r = requests.get(f"https://valorant-api.com/v1/weapons/skins/{puuid}",headers=headers)
     data = r.json()
 
     return data
