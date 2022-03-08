@@ -4,8 +4,12 @@ from discord.commands import Option, slash_command
 import requests
 import json
 
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
+
 def weapon_list():
-	r = requests.get("https://valorant-api.com/v1/weapons")
+	r = requests.get("https://valorant-api.com/v1/weapons",headers=headers)
 	data = r.json()
 	weapons = []
 	weapon_dict = {}
@@ -24,7 +28,7 @@ def weapon_list():
 def weapon_stats(uuid):
 
 	WEAPON_STAT = {}
-	r = requests.get(f"https://valorant-api.com/v1/weapons/{uuid}")
+	r = requests.get(f"https://valorant-api.com/v1/weapons/{uuid}",headers=headers)
 	data = r.json()
 
 	WEAPON_STAT["displayName"] = data["data"]["displayName"]
