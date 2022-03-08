@@ -2,9 +2,14 @@ import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
 import requests
+import json 
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 def get_erros(region):
-	r  = requests.get(f"https://api.henrikdev.xyz/valorant/v1/status/{region}")
+	r  = requests.get(f"https://api.henrikdev.xyz/valorant/v1/status/{region}", headers=headers)
 
 	data = r.json()
 
