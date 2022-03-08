@@ -9,8 +9,14 @@ import json
 with open ('././extension/emoji.json', 'r') as f:
 	emojidata = json.load(f)
 
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
+
 def profile_info(username, tagline):
-	api_Req = requests.get(f"https://api.henrikdev.xyz/valorant/v1/account/{username}/{tagline}")
+		
+	
+	api_Req = requests.get(f"https://api.henrikdev.xyz/valorant/v1/account/{username}/{tagline}", headers=headers)
 	data = api_Req.json()
 
 	VALUE = {}
@@ -26,7 +32,7 @@ def profile_info(username, tagline):
 	return VALUE
 
 def getRank(region, puuid):
-	req_data = requests.get(f"https://api.henrikdev.xyz/valorant/v2/by-puuid/mmr/{region}/{puuid}") 
+	req_data = requests.get(f"https://api.henrikdev.xyz/valorant/v2/by-puuid/mmr/{region}/{puuid}", headers=headers) 
 	whole_data = req_data.json()
 		
 	currenttier =  whole_data['data']['current_data']['currenttier']

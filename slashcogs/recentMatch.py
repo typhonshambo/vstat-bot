@@ -1,8 +1,12 @@
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
-from discord_components import *
 import requests
+import json
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 agent_icons = {
 	'Jett' : '<:displayiconsmall:875404905563697184>',
@@ -77,7 +81,7 @@ agent_img={
 
 def GetMatchData(region, user_id):
 
-	history_api = requests.get(f"https://api.henrikdev.xyz/valorant/v3/by-puuid/matches/{region}/{user_id}?filter=competitive")
+	history_api = requests.get(f"https://api.henrikdev.xyz/valorant/v3/by-puuid/matches/{region}/{user_id}?filter=competitive",headers=headers)
 	data = history_api.json()
 	
 	try:
@@ -88,7 +92,7 @@ def GetMatchData(region, user_id):
 
 
 def matchStat(match_id):
-	match_api = requests.get(f"https://api.henrikdev.xyz/valorant/v2/match/{match_id}")
+	match_api = requests.get(f"https://api.henrikdev.xyz/valorant/v2/match/{match_id}",headers=headers)
 	data = match_api.json()
 
 	MATCH_DATA = {}
@@ -185,7 +189,7 @@ class slash_recentmatch(commands.Cog):
 					match_id = match_data
 					
 					mch_data , plr_data = matchStat(match_id)
-					print(plr_data)
+					
 
 					match_map = mch_data['match_info']['map_name']
 					match_date = mch_data["match_info"]["start"]

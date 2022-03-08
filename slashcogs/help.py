@@ -2,7 +2,6 @@ from unicodedata import name
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command, SlashCommandGroup
-from discord_components import *
 import requests
 import json
 

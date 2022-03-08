@@ -2,9 +2,14 @@ import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command, SlashCommandGroup
 import requests
+import json
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 def getleaderboard(region , amount):
-	raw_data = requests.get(f"https://api.henrikdev.xyz/valorant/v1/leaderboard/{region}")
+	raw_data = requests.get(f"https://api.henrikdev.xyz/valorant/v1/leaderboard/{region}", headers=headers)
 	data = raw_data.json()
 
 	PLAYER_DATA = {}

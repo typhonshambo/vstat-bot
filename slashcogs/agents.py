@@ -1,12 +1,16 @@
 import discord
 from discord.ext import commands
 from discord.commands import Option, slash_command
-from discord_components import *
 import requests
 import asyncio
+import json
+
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
 
 def agent_data(agentUuid):
-	req_data = requests.get(f"https://valorant-api.com/v1/agents/{agentUuid}") 
+	req_data = requests.get(f"https://valorant-api.com/v1/agents/{agentUuid}", headers=headers) 
 	whole_data = req_data.json()
 
 	data = {

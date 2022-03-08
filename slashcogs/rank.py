@@ -12,9 +12,13 @@ with open ('././config/config.json', 'r') as f:
 	config = json.load(f)
 	prefix = config['prefix']
 
+with open ('././config/api.json', 'r') as f:
+	api_heads = json.load(f)
+	headers = api_heads["user_agent"]
+
 
 def getRank(region, puuid):
-	req_data = requests.get(f"https://api.henrikdev.xyz/valorant/v2/by-puuid/mmr/{region}/{puuid}") 
+	req_data = requests.get(f"https://api.henrikdev.xyz/valorant/v2/by-puuid/mmr/{region}/{puuid}", headers=headers) 
 	whole_data = req_data.json()
 	
 	RANK_DATA = {
