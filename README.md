@@ -102,8 +102,9 @@ pip install discord-components
 ## Bot-Invite
 here is one ready made bot, which you can add in your server :)
 
-[![Discord Bots](https://top.gg/api/widget/864451929346539530.svg)(https://top.gg/bot/864451929346539530)
-
+<a href="https://top.gg/bot/864451929346539530">
+  <img src="https://top.gg/api/widget/864451929346539530.svg">
+</a>
 
 
 ## BOT-showcase
