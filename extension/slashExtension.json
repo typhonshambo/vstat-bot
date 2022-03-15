@@ -13,6 +13,7 @@
         "slashcogs.weapon",
         "slashcogs.skins",
 
-        "slashcogs.guildOnly.serverlist"
+        "slashcogs.guildOnly.serverlist",
+        "slashcogs.guildOnly.botinfo"
     ]
 }
