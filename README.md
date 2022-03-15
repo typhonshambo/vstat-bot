@@ -117,7 +117,9 @@ here is one ready made bot, which you can add in your server :)
 [![Support Server](https://discord.com/api/guilds/556197206147727391/widget.png?style=banner2)](https://discord.gg/m5mSyTV7RR)
 
 
-
+## NOTE
+Although, the code of Vstat is open-source, still i do not promote cloning of my BOT. There is always a chance that you will get error if you try to self-host the BOT, in such a case no support will be provided by us. 
+So, i would recommend inviting the original BOT for hassel free experience [click here](#BOT-Invite) :D
 
 ## Contributors
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=typhonshambo/Valorant-server-stat-bot)
