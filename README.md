@@ -109,7 +109,7 @@ here is one ready made bot, which you can add in your server :)
 
 ## BOT-showcase
 
-<img src="https://raw.githubusercontent.com/typhonshambo/Valorant-server-stat-bot/b3114f16d84c8a2db2d4da2383bcb5019aa8383d/assets/VSTAT.svg" width="850"/> 
+<img src="https://raw.githubusercontent.com/typhonshambo/Valorant-server-stat-bot/724542ab94f7409b8c5d5b3102740775143a0666/assets/VSTAT.svg" width="850"/> 
 
 
 
