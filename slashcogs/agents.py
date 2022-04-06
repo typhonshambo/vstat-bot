@@ -46,7 +46,7 @@ class slash_agent(commands.Cog):
 				"KAY/O" : "601dbbe7-43ce-be57-2a40-4abd24953621",
 				"Skye" : "6f2a04ca-43e0-be17-7f36-b3908627744d",
 				"Cypher" : "117ed9e3-49f3-6512-3ccf-0cada7e3823b",
-				"Sova" : "ded3520f-4264-bfed-162d-b080e2abccf9",
+				"Sova" : "320b2a48-4d9b-a075-30f1-1f93a9b638fa",
 				"Killjoy" : "1e58de9c-4950-5125-93e9-a0aee9f98746",
 				"Viper" : "707eab51-4836-f488-046a-cda6bf494859",
 				"Astra" : "41fb69c1-4189-7b37-f117-bcaf1e96f1bf",
