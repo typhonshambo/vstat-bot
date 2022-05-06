@@ -29,7 +29,7 @@ class slash_agent(commands.Cog):
 		
 
 		
-	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett', 'Chamber','Neon']
+	agent_list = ['Breach', 'Raze', 'KAY/O', 'Skye', 'Cypher', 'Sova', 'Killjoy', 'Viper', 'Phoenix', 'Astra', 'Brimstone', 'Yoru', 'Sage', 'Reyna', 'Omen', 'Jett', 'Chamber','Neon','Fade']
 	
 	
 
@@ -58,7 +58,8 @@ class slash_agent(commands.Cog):
 				"Omen" : "8e253930-4c05-31dd-1b6c-968525494517",
 				"Jett" : "add6443a-41bd-e414-f6ad-e58d267f4e95",
 				"Chamber" : "22697a3d-45bf-8dd7-4fec-84a9e28c69d7",
-				"Neon" : "bb2a4828-46eb-8cd1-e765-15848195d751"
+				"Neon" : "bb2a4828-46eb-8cd1-e765-15848195d751",
+				"Fade" : "dade69b4-4f5a-8528-247b-219e5a1facd6"
 			}
 
 			values = agent_data(agent_puuid[f'{agent}'])
