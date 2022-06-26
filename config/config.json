@@ -3,4 +3,5 @@
     "prefix": "!",
     "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE",
     "topgg_botid": "864451929346539530"
+    "topgg_token":"TOPGG_TOKEN_HERE"
 }
