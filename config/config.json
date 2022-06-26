@@ -1,6 +1,6 @@
 {
     "token":"PUT_YOUR_TOKEN_HERE",
     "prefix": "!",
-    "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE"
- "topgg_botid": "864451929346539530"
+    "database_url":"PUT_YOUR_POSTGRES_DATABASE_URL_HERE",
+    "topgg_botid": "864451929346539530"
 }
