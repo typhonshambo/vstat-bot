@@ -26,7 +26,8 @@ agent_icons = {
 	'Astra': '<:displayiconsmall4:875404906993954826>',
 	'KAY/O': '<:displayiconsmall12:875404906171875369>',
 	'Chamber': '<:displayiconsmall20:931574499814539364>',
-	'Neon': '<:displayiconsmall21:931575512692822056>'
+	'Neon': '<:displayiconsmall21:931575512692822056>',
+	'Fade' : '<:fade:997156964989677668>'
 }
 
 
@@ -75,7 +76,8 @@ agent_img={
 "Omen":"https://media.valorant-api.com/agents/8e253930-4c05-31dd-1b6c-968525494517/displayicon.png",
 "Jett":"https://media.valorant-api.com/agents/add6443a-41bd-e414-f6ad-e58d267f4e95/displayicon.png",
 "Chamber" : "https://media.valorant-api.com/agents/22697a3d-45bf-8dd7-4fec-84a9e28c69d7/displayicon.png",
-"Neon" : "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png"
+"Neon" : "https://media.valorant-api.com/agents/bb2a4828-46eb-8cd1-e765-15848195d751/displayicon.png",
+"Fade" : "https://media.valorant-api.com/agents/dade69b4-4f5a-8528-247b-219e5a1facd6/displayicon.png"
 }
 
 
