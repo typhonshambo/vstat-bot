@@ -100,7 +100,7 @@ class slash_rank(commands.Cog):
 			)
 			embed.add_field(name ="HOLD ON MAN !",value = f"""
 			you need to link your account before you can use this command,
-			use `{prefix}h link` to know more!
+			use `/link` to know more!
 			""")
 			await ctx.respond(embed=embed)
 
