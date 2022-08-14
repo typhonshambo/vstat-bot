@@ -4,6 +4,9 @@ from discord.commands import Option, slash_command, SlashCommandGroup
 import requests
 import json
 
+with open ('././extension/emoji.json', 'r') as f:
+	emojidata = json.load(f)
+
 with open ('././config/api.json', 'r') as f:
 	api_heads = json.load(f)
 	headers = api_heads["user_agent"]
@@ -38,13 +41,33 @@ class slash_leaderboard(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 
+
+
+	regionList = [
+		"na",
+		"ap",
+		"eu",
+		"br",
+		"kr",
+		"latam"
+	]
+
 	@commands.slash_command(description="Get Leaderboard of Top players")
 	async def leaderboard(
 		self,
 		ctx,
-		region: Option(str, "Get leaderboard for your region", required=True),
+		region: Option(str, "Get leaderboard for your region", choices=regionList,required=True),
 		amount: Option(int, "Number of players you want in leaderboard", default=10, required=False)
 	):
+		regionData = {
+			"na": "NA - North America",
+			"eu" : "EU - Europe",
+			"ap" : "AP - Asia Pacific",
+			"br": "BR - Brazil",
+			"kr" : "KR - Korea",
+			"latam" : "LATAM - Latin America"
+		}
+
 		try:
 			await ctx.response.defer()
 
@@ -79,11 +102,12 @@ class slash_leaderboard(commands.Cog):
 				embed.add_field(name = "LEADERBOARD", value =leaderboard,inline=True)
 				embed.add_field(name = "WINS", value=wins, inline=True)
 				embed.add_field(name = "RR", value=rr, inline=True)
+				embed.set_footer(text=f"🟢 {regionData[region]}")
 				embed.set_thumbnail(url="https://media.valorant-api.com/competitivetiers/e4e9a692-288f-63ca-7835-16fbf6234fda/24/largeicon.png")
 				
 				view = discord.ui.View()
-				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
+				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
 				
 				await ctx.respond(
 					embed=embed,
@@ -97,9 +121,8 @@ class slash_leaderboard(commands.Cog):
 				)
 							
 				view = discord.ui.View()
-				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
-				
+				view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+				view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
 				await ctx.respond(
 					embed=embed,
 					view=view
@@ -111,9 +134,9 @@ class slash_leaderboard(commands.Cog):
 				description="The provided region is invalid\nNot sure about your region?\nuse `/profile` to know your region"
 			)
 			view = discord.ui.View()
-			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url))
-			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url))
-				
+			view.add_item(discord.ui.Button(label='Support Server', url='https://discord.gg/m5mSyTV7RR', style=discord.ButtonStyle.url, emoji=emojidata["support"]))
+			view.add_item(discord.ui.Button(label='Vote', url='https://top.gg/bot/864451929346539530/vote', style=discord.ButtonStyle.url, emoji=emojidata["vote"]))
+			
 			await ctx.respond(embed=embed, view=view)
 
 
