@@ -10,21 +10,21 @@ with open ('././config/api.json', 'r') as f:
 	headers = api_heads["user_agent"]
 
 def agentData():
-    requestData = requests.get("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
-    rawData = requestData.json()
+	requestData = requests.get("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
+	rawData = requestData.json()
 
-    i = 0
-    agent_list = []
-    agent_full_values = {}
+	i = 0
+	agent_list = []
+	agent_full_values = {}
 
-    for i in range(len(rawData["data"])):
-        agent_list.append(rawData["data"][i]["displayName"])
-        map_name = rawData["data"][i]["displayName"]
-        agent_full_values[f"{map_name}"] = rawData["data"][i]["uuid"]
+	for i in range(len(rawData["data"])):
+		agent_list.append(rawData["data"][i]["displayName"])
+		map_name = rawData["data"][i]["displayName"]
+		agent_full_values[f"{map_name}"] = rawData["data"][i]["uuid"]
 
-        i += 1
+		i += 1
 
-    return agent_list, agent_full_values
+	return agent_list, agent_full_values
 
 def agent_data(agentUuid):
 	req_data = requests.get(f"https://valorant-api.com/v1/agents/{agentUuid}", headers=headers) 
@@ -33,10 +33,9 @@ def agent_data(agentUuid):
 	data = {
 		"description" : whole_data['data']['description'],
 		"displayIcon" : whole_data['data']['displayIcon'],
-		"bustPortrait" : whole_data['data']['bustPortrait'], 
+		"fullPortrait" : whole_data['data']['fullPortrait'], 
 		"abilities" : whole_data['data']['abilities']
 	}
-	
 	return data
 
  
@@ -64,7 +63,7 @@ class slash_agent(commands.Cog):
 				title = agent,
 				description = values['description']
 			)
-			agent_embed.set_image(url=values['bustPortrait'])
+			agent_embed.set_image(url=values['fullPortrait'])
 			agent_embed.set_thumbnail(url=values['displayIcon'])
 			agent_embed.add_field(name = f"{values['abilities'][0]['displayName']}", value = f"{values['abilities'][0]['description']}", inline=False)
 			agent_embed.add_field(name = f"{values['abilities'][1]['displayName']}", value = f"{values['abilities'][1]['description']}",inline=False)
